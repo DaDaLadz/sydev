@@ -1,0 +1,392 @@
+import { useState } from 'react';
+
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  role: string;
+  artistName: string;
+  services: string[];
+  budget: string;
+  timeline: string;
+  goals: string;
+  additionalInfo: string;
+};
+
+const Contact = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    role: '',
+    artistName: '',
+    services: [],
+    budget: '',
+    timeline: '',
+    goals: '',
+    additionalInfo: '',
+  });
+
+  const roles = ['Major Label', 'Indie Label', 'Independent', 'Manager', 'Agency', 'Other'];
+  const services = ['Influencer Marketing', 'Playlist Placements', 'Fan Page Growth', 'Paid Advertising', 'Social Media Management'];
+  const budgets = ['Under $5K', '$5K - $10K', '$10K - $25K', '$25K - $50K', '$50K+', 'Not Sure'];
+  const timelines = ['ASAP', '1-2 Weeks', '2-4 Weeks', '1-2 Months', 'Flexible'];
+
+  const totalSteps = 4;
+
+  const canProceed = () => {
+    if (currentStep === 0) {
+      return formData.name && formData.email && formData.role;
+    }
+    if (currentStep === 1) {
+      return formData.services.length > 0;
+    }
+    if (currentStep === 2) {
+      return formData.budget && formData.timeline;
+    }
+    return true;
+  };
+
+  const handleNext = () => {
+    if (canProceed() && currentStep < totalSteps - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const handleRoleSelect = (role: string) => {
+    setFormData({ ...formData, role });
+  };
+
+  const handleServiceToggle = (service: string) => {
+    const services = formData.services.includes(service)
+      ? formData.services.filter((s) => s !== service)
+      : [...formData.services, service];
+    setFormData({ ...formData, services });
+  };
+
+  const handleBudgetSelect = (budget: string) => {
+    setFormData({ ...formData, budget });
+  };
+
+  const handleTimelineSelect = (timeline: string) => {
+    setFormData({ ...formData, timeline });
+  };
+
+  const handleSubmit = () => {
+    console.log('Form submitted:', formData);
+    alert('Thank you! We will be in touch soon.');
+  };
+
+  return (
+    <section id="contact" className="section-padding bg-dark relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-accent-light/15 via-orange/5 to-transparent"></div>
+      <div className="absolute top-0 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-orange-light/12 blur-[80px] rounded-full will-change-transform"></div>
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255, 107, 44, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 44, 0.6) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+        }}
+      ></div>
+
+      <div className="relative max-w-7xl mx-auto w-full">
+        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 items-start">
+          {/* Left Column */}
+          <div className="lg:sticky lg:top-24">
+            <h2 className="section-title mb-6">
+              Ready to <span className="gradient-text">Grow?</span>
+            </h2>
+            <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+              Drop us a message or book a call directly. Whether you're ready to launch or just exploring your options, let's
+              talk.
+            </p>
+            <a
+              href="/get-started"
+              className="btn-primary inline-flex items-center gap-3 mb-6"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+              Get Started
+            </a>
+            <p className="text-gray-500">Quick intro call. No commitment required.</p>
+
+            <div className="mt-12 pt-8 border-t border-gray-800">
+              <div className="flex items-center gap-8">
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                  <span className="text-sm text-gray-400">24hr Response</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                  <span className="text-sm text-gray-400">No Commitment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Form */}
+          <div className="bg-card rounded-2xl border border-gray-800 p-4 sm:p-8 w-full max-w-full overflow-hidden">
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-xl sm:text-3xl font-display uppercase mb-2">
+                Know What You <span className="gradient-text">Need?</span>
+              </h3>
+              <p className="text-gray-400 text-sm sm:text-base">Tell us more for a customized proposal.</p>
+            </div>
+
+            {/* Progress Indicator */}
+            <div className="w-full max-w-full overflow-hidden">
+              <div className="flex items-center justify-between mb-5 w-full">
+                {[...Array(totalSteps)].map((_, index) => (
+                  <div key={index} className="flex items-center flex-1">
+                    <button
+                      className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all flex-shrink-0 ${
+                        index <= currentStep ? 'bg-accent text-white' : 'bg-gray-700 text-gray-500'
+                      }`}
+                    >
+                      {index + 1}
+                    </button>
+                    {index < totalSteps - 1 && (
+                      <div
+                        className={`flex-1 h-0.5 mx-2 transition-all rounded ${
+                          index < currentStep ? 'bg-accent' : 'bg-gray-700'
+                        }`}
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Form Steps */}
+              <div className="min-h-[300px]">
+                {/* Step 1: About You */}
+                {currentStep === 0 && (
+                  <div className="space-y-4">
+                    <h3 className="text-lg sm:text-2xl font-bold text-white">About You</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">Your Name *</label>
+                        <input
+                          type="text"
+                          name="name"
+                          className="input-field text-base py-3"
+                          placeholder="John Smith"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">Email *</label>
+                        <input
+                          type="email"
+                          name="email"
+                          className="input-field text-base py-3"
+                          placeholder="you@example.com"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">Phone (optional)</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          className="input-field text-base py-3"
+                          placeholder="+1 (555) 000-0000"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">I am a... *</label>
+                        <div className="grid grid-cols-2 gap-2">
+                          {roles.map((role) => (
+                            <button
+                              key={role}
+                              type="button"
+                              onClick={() => handleRoleSelect(role)}
+                              className={`p-3 rounded-lg border text-sm font-medium transition-all ${
+                                formData.role === role
+                                  ? 'border-accent bg-accent/20 text-white'
+                                  : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
+                              }`}
+                            >
+                              {role}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                          Artist/Project Name (optional)
+                        </label>
+                        <input
+                          type="text"
+                          name="artistName"
+                          className="input-field text-base py-3"
+                          placeholder="Your artist or project name"
+                          value={formData.artistName}
+                          onChange={(e) => setFormData({ ...formData, artistName: e.target.value })}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Step 2: Services */}
+                {currentStep === 1 && (
+                  <div className="space-y-4">
+                    <h3 className="text-lg sm:text-2xl font-bold text-white">What Services Do You Need?</h3>
+                    <p className="text-sm text-gray-400">Select all that apply</p>
+                    <div className="space-y-2">
+                      {services.map((service) => (
+                        <button
+                          key={service}
+                          type="button"
+                          onClick={() => handleServiceToggle(service)}
+                          className={`w-full p-4 rounded-lg border text-left text-sm font-medium transition-all ${
+                            formData.services.includes(service)
+                              ? 'border-accent bg-accent/20 text-white'
+                              : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
+                          }`}
+                        >
+                          {service}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Step 3: Budget & Timeline */}
+                {currentStep === 2 && (
+                  <div className="space-y-4">
+                    <h3 className="text-lg sm:text-2xl font-bold text-white">Budget & Timeline</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">Budget *</label>
+                        <div className="grid grid-cols-2 gap-2">
+                          {budgets.map((budget) => (
+                            <button
+                              key={budget}
+                              type="button"
+                              onClick={() => handleBudgetSelect(budget)}
+                              className={`p-3 rounded-lg border text-sm font-medium transition-all ${
+                                formData.budget === budget
+                                  ? 'border-accent bg-accent/20 text-white'
+                                  : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
+                              }`}
+                            >
+                              {budget}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">When do you want to start? *</label>
+                        <div className="grid grid-cols-2 gap-2">
+                          {timelines.map((timeline) => (
+                            <button
+                              key={timeline}
+                              type="button"
+                              onClick={() => handleTimelineSelect(timeline)}
+                              className={`p-3 rounded-lg border text-sm font-medium transition-all ${
+                                formData.timeline === timeline
+                                  ? 'border-accent bg-accent/20 text-white'
+                                  : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
+                              }`}
+                            >
+                              {timeline}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Step 4: Final Details */}
+                {currentStep === 3 && (
+                  <div className="space-y-4">
+                    <h3 className="text-lg sm:text-2xl font-bold text-white">Tell Us More</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                          What are your main goals?
+                        </label>
+                        <textarea
+                          name="goals"
+                          rows={3}
+                          className="input-field text-base py-3"
+                          placeholder="E.g., grow streams, build social media presence, increase engagement..."
+                          value={formData.goals}
+                          onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                          Anything else we should know?
+                        </label>
+                        <textarea
+                          name="additionalInfo"
+                          rows={3}
+                          className="input-field text-base py-3"
+                          placeholder="Links to music, social profiles, past campaigns, etc."
+                          value={formData.additionalInfo}
+                          onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Navigation Buttons */}
+              <div className="flex items-center justify-between mt-5 pt-4 border-t border-gray-800">
+                <div>
+                  {currentStep > 0 && (
+                    <button
+                      type="button"
+                      onClick={handlePrev}
+                      className="text-gray-400 hover:text-white transition-colors text-sm py-2.5 px-5 flex items-center gap-1.5 bg-transparent border-none cursor-pointer"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                      </svg>
+                      Back
+                    </button>
+                  )}
+                </div>
+                <button
+                  type="button"
+                  onClick={currentStep === totalSteps - 1 ? handleSubmit : handleNext}
+                  disabled={!canProceed()}
+                  className="btn-primary text-sm py-2.5 px-5 flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentStep === totalSteps - 1 ? 'Submit' : 'Continue'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
