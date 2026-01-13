@@ -5,7 +5,7 @@ type FormData = {
   email: string;
   phone: string;
   role: string;
-  artistName: string;
+  brandName: string;
   services: string[];
   budget: string;
   timeline: string;
@@ -20,7 +20,7 @@ const Contact = () => {
     email: '',
     phone: '',
     role: '',
-    artistName: '',
+    brandName: '',
     services: [],
     budget: '',
     timeline: '',
@@ -28,10 +28,10 @@ const Contact = () => {
     additionalInfo: '',
   });
 
-  const roles = ['Major Label', 'Indie Label', 'Independent', 'Manager', 'Agency', 'Other'];
-  const services = ['Influencer Marketing', 'Playlist Placements', 'Fan Page Growth', 'Paid Advertising', 'Social Media Management'];
-  const budgets = ['Under $5K', '$5K - $10K', '$10K - $25K', '$25K - $50K', '$50K+', 'Not Sure'];
-  const timelines = ['ASAP', '1-2 Weeks', '2-4 Weeks', '1-2 Months', 'Flexible'];
+  const roles = ['Brand Owner', 'CMO/Marketing Lead', 'Agency Partner', 'E-Commerce Manager', 'Investor', 'Other'];
+  const services = ['Store Build/Migration', 'Paid Ads & Analytics', 'Email & SMS Automation', 'Branding & Creative', 'CRO & Optimization'];
+  const budgets = ['Under $10K/mo', '$10K-$25K/mo', '$25K-$50K/mo', '$50K-$100K/mo', '$100K+/mo', 'One-Time Project'];
+  const timelines = ['ASAP', '2-4 Weeks', '1-2 Months', '3+ Months', 'Flexible'];
 
   const totalSteps = 4;
 
@@ -81,7 +81,7 @@ const Contact = () => {
 
   const handleSubmit = () => {
     console.log('Form submitted:', formData);
-    alert('Thank you! We will be in touch soon.');
+    alert('Thank you! We will be in touch within 24 hours.');
   };
 
   return (
@@ -103,22 +103,21 @@ const Contact = () => {
           {/* Left Column */}
           <div className="lg:sticky lg:top-24">
             <h2 className="section-title mb-6">
-              Ready to <span className="gradient-text">Grow?</span>
+              Let's Build <span className="gradient-text">Together</span>
             </h2>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-              Drop us a message or book a call directly. Whether you're ready to launch or just exploring your options, let's
-              talk.
+              Ready to scale your Shopify store? Book a discovery call or tell us about your project. We'll get back to you within 24 hours.
             </p>
             <a
-              href="/get-started"
+              href="mailto:hello@shopyard.com"
               className="btn-primary inline-flex items-center gap-3 mb-6"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Get Started
+              Email Us Directly
             </a>
-            <p className="text-gray-500">Quick intro call. No commitment required.</p>
+            <p className="text-gray-500">Or fill out the form to get a custom proposal.</p>
 
             <div className="mt-12 pt-8 border-t border-gray-800">
               <div className="flex items-center gap-8">
@@ -132,7 +131,7 @@ const Contact = () => {
                   <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
-                  <span className="text-sm text-gray-400">No Commitment</span>
+                  <span className="text-sm text-gray-400">Free Consultation</span>
                 </div>
               </div>
             </div>
@@ -142,9 +141,9 @@ const Contact = () => {
           <div className="bg-card rounded-2xl border border-gray-800 p-4 sm:p-8 w-full max-w-full overflow-hidden">
             <div className="mb-4 sm:mb-6">
               <h3 className="text-xl sm:text-3xl font-display uppercase mb-2">
-                Know What You <span className="gradient-text">Need?</span>
+                Start Your <span className="gradient-text">Project</span>
               </h3>
-              <p className="text-gray-400 text-sm sm:text-base">Tell us more for a customized proposal.</p>
+              <p className="text-gray-400 text-sm sm:text-base">Tell us what you're building.</p>
             </div>
 
             {/* Progress Indicator */}
@@ -194,7 +193,7 @@ const Contact = () => {
                           type="email"
                           name="email"
                           className="input-field text-base py-3"
-                          placeholder="you@example.com"
+                          placeholder="you@brand.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         />
@@ -231,15 +230,15 @@ const Contact = () => {
                       </div>
                       <div>
                         <label className="block text-sm font-semibold text-gray-300 mb-1.5">
-                          Artist/Project Name (optional)
+                          Brand/Company Name (optional)
                         </label>
                         <input
                           type="text"
-                          name="artistName"
+                          name="brandName"
                           className="input-field text-base py-3"
-                          placeholder="Your artist or project name"
-                          value={formData.artistName}
-                          onChange={(e) => setFormData({ ...formData, artistName: e.target.value })}
+                          placeholder="Your brand name"
+                          value={formData.brandName}
+                          onChange={(e) => setFormData({ ...formData, brandName: e.target.value })}
                         />
                       </div>
                     </div>
@@ -249,7 +248,7 @@ const Contact = () => {
                 {/* Step 2: Services */}
                 {currentStep === 1 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">What Services Do You Need?</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-white">What Do You Need?</h3>
                     <p className="text-sm text-gray-400">Select all that apply</p>
                     <div className="space-y-2">
                       {services.map((service) => (
@@ -330,7 +329,7 @@ const Contact = () => {
                           name="goals"
                           rows={3}
                           className="input-field text-base py-3"
-                          placeholder="E.g., grow streams, build social media presence, increase engagement..."
+                          placeholder="E.g., increase conversion rate, scale profitably, launch new store..."
                           value={formData.goals}
                           onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
                         />
@@ -343,7 +342,7 @@ const Contact = () => {
                           name="additionalInfo"
                           rows={3}
                           className="input-field text-base py-3"
-                          placeholder="Links to music, social profiles, past campaigns, etc."
+                          placeholder="Current platform, revenue, team size, challenges, etc."
                           value={formData.additionalInfo}
                           onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })}
                         />

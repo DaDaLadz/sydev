@@ -13,10 +13,13 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="text-3xl font-display uppercase tracking-wider mb-4">
-              4Labs <span className="gradient-text">Music</span>
+              Shop <span className="gradient-text">Yard</span>
             </div>
             <p className="text-gray-400 max-w-md text-lg leading-relaxed">
-              Strategic music marketing for artists and labels who demand real growth, not vanity metrics.
+              We help e-commerce brands build the systems underneath their storefront, so scale feels smooth, not fragile.
+            </p>
+            <p className="text-gray-500 text-sm mt-4">
+              A 4Labs Digital Company
             </p>
           </div>
 
@@ -61,11 +64,11 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display uppercase tracking-wider text-lg mb-6">Contact</h4>
+            <h4 className="font-display uppercase tracking-wider text-lg mb-6">Get In Touch</h4>
             <ul className="space-y-4 text-gray-400">
               <li>
-                <a href="mailto:contact@4labsmusic.net" className="hover:text-accent transition-colors">
-                  contact@4labsmusic.net
+                <a href="mailto:hello@shopyard.com" className="hover:text-accent transition-colors">
+                  hello@shopyard.com
                 </a>
               </li>
             </ul>
@@ -74,7 +77,7 @@ const Footer = () => {
 
         {/* Bottom Row */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500">
-          <p>© 2026 4Labs Digital. All rights reserved.</p>
+          <p>© 2025 Shop Yard. A 4Labs Digital Company. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy" className="hover:text-accent transition-colors">
               Privacy Policy

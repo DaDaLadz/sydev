@@ -7,34 +7,34 @@ type FAQItem = {
 
 const faqs: FAQItem[] = [
   {
-    question: 'How does the process work?',
+    question: 'Do you only work with Shopify stores?',
     answer:
-      "Every campaign starts with a quick onboarding call and a strategy tailored to your goals. We handle creative, targeting, execution, and optimization while you focus on the music. Weekly updates with full transparency on performance.",
+      "We specialize in Shopify and Shopify Plus, but we've also worked with brands on WooCommerce, BigCommerce, and custom platforms. Our approach is platform-agnostic - we focus on building systems that scale, no matter what tech stack you're using.",
   },
   {
-    question: 'Is this real promotion or bots?',
+    question: 'What size brands do you typically work with?',
     answer:
-      'Everything we do is 100% transparent and platform compliant. No bots. No fake streams. No inflated numbers. Our strategies are backed by paid media, creator partnerships, and curated networks, all designed to build long term fans.',
+      "Most of our clients are doing $500K-$10M+ in annual revenue and are looking to scale sustainably. We work with both bootstrapped DTC brands and venture-backed e-commerce companies. If you're past the figuring it out phase and ready to build real systems, we can help.",
   },
   {
-    question: 'What platforms do you promote on?',
+    question: 'How does the engagement process work?',
     answer:
-      'We run campaigns across Spotify, Apple Music, YouTube, TikTok, Instagram, Meta, and a variety of other platforms. Our multi platform approach ensures your roster reaches fans wherever they discover new music.',
+      "We start with a discovery call to understand your goals, current setup, and biggest pain points. From there, we'll propose a tailored scope - whether that's a full-service retainer, a one-time project, or ongoing support. Most clients work with us on a monthly retainer basis for 6-12 months.",
   },
   {
-    question: 'Do you work with labels or only indie artists?',
+    question: 'Can you help with store migrations?',
     answer:
-      'We partner with major labels, indie labels, and independent artists alike. From Universal Music Group and EMPIRE to emerging artists releasing their first single. Our approach stays the same: strategy first, results driven, fully customized.',
+      "Yes. We've handled dozens of platform migrations - from WooCommerce to Shopify, Magento to Shopify Plus, and custom builds to Shopify. We handle everything: data migration, theme setup, app integrations, SEO preservation, and post-launch optimization.",
   },
   {
     question: 'What kind of results can we expect?',
     answer:
-      "Results vary by campaign, but our track record speaks for itself. We've driven 20M+ views for The Weeknd, 22M views for All American Rejects, and achieved 200M+ views for Mo Amer with zero paid ads. We'll discuss realistic targets for your specific goals.",
+      "Results vary by brand, but our clients typically see 2-4x revenue growth within 12 months, improved conversion rates, lower CAC, and higher LTV. We focus on sustainable, compounding growth - not quick wins that fall apart under scale.",
   },
   {
-    question: 'How long until we see results?',
+    question: 'Do you offer one-time projects or only retainers?',
     answer:
-      'Most clients see meaningful traction within the first 2 to 4 weeks. However, sustainable growth is a marathon, not a sprint. We focus on building lasting momentum and long term fan engagement.',
+      "Both. We offer one-time projects for things like store builds, migrations, or conversion rate audits. For ongoing growth - paid ads, email automation, CRO testing - we work on monthly retainers. Most clients start with a project and transition to ongoing support once they see results.",
   },
 ];
 

@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 type CaseStudy = {
   id: number;
-  artist: string;
-  label: string;
-  category: 'Artist' | 'Fan Page' | 'Client';
+  brand: string;
+  industry: string;
+  category: 'E-Commerce' | 'Shopify' | 'DTC';
   campaignType: string;
   color: string;
   stats: {
@@ -17,92 +17,50 @@ type CaseStudy = {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    artist: 'The Weeknd',
-    label: 'XO / Republic',
-    category: 'Artist',
-    campaignType: 'Influencer Campaign',
-    color: '#E31937',
+    brand: 'Chuga',
+    industry: 'Premium Apparel',
+    category: 'DTC',
+    campaignType: 'Full-Stack Growth',
+    color: '#FF6B00',
     stats: [
-      { label: 'Views', value: '20M', highlight: true },
-      { label: 'Engagement', value: '10.85%' },
-      { label: 'Audio Uses', value: '15K+' },
-      { label: 'Platform', value: 'TikTok' },
+      { label: 'Revenue Growth', value: '340%', highlight: true },
+      { label: 'ROAS', value: '4.2x' },
+      { label: 'Email Revenue', value: '32%' },
+      { label: 'Timeline', value: '12 Months' },
     ],
   },
   {
     id: 2,
-    artist: 'All American Rejects',
-    label: 'DGC Records',
-    category: 'Artist',
-    campaignType: 'Influencer Campaign',
-    color: '#FF6B00',
+    brand: 'AANM',
+    industry: 'Beauty & Wellness',
+    category: 'E-Commerce',
+    campaignType: 'Paid Ads + CRO',
+    color: '#2196F3',
     stats: [
-      { label: 'Views', value: '22M', highlight: true },
-      { label: 'Engagements', value: '750K' },
-      { label: 'Audio Uses', value: '50K+' },
-      { label: 'Platform', value: 'TikTok' },
+      { label: 'AOV Increase', value: '+47%', highlight: true },
+      { label: 'CVR', value: '3.8%' },
+      { label: 'CAC Reduction', value: '-28%' },
+      { label: 'Platform', value: 'Shopify Plus' },
     ],
   },
   {
     id: 3,
-    artist: 'MC Abdul',
-    label: 'Fan Page',
-    category: 'Fan Page',
-    campaignType: 'Fan Page Growth',
-    color: '#FF8C00',
-    stats: [
-      { label: 'Followers', value: '50K', highlight: true },
-      { label: 'Days', value: '90' },
-      { label: 'Views', value: '15M' },
-      { label: 'Engagement', value: '13%' },
-    ],
-  },
-  {
-    id: 4,
-    artist: 'Mo Amer',
-    label: 'Comedian / Actor',
-    category: 'Client',
-    campaignType: 'Organic Social Campaign',
+    brand: 'Portalba',
+    industry: 'Home & Lifestyle',
+    category: 'Shopify',
+    campaignType: 'Store Build + Automation',
     color: '#FF4D00',
     stats: [
-      { label: 'Views', value: '200M+', highlight: true },
-      { label: 'New Followers', value: '1M+' },
-      { label: 'TikTok Growth', value: '+300%' },
-      { label: 'Paid Ads', value: '$0' },
-    ],
-  },
-  {
-    id: 5,
-    artist: 'Mishaal Tamer',
-    label: 'Artist',
-    category: 'Artist',
-    campaignType: 'Playlist Placement',
-    color: '#1DB954',
-    stats: [
-      { label: 'Streams', value: '1M+', highlight: true },
-      { label: 'Playlists', value: '50+' },
-      { label: 'Countries', value: '10+' },
-      { label: 'Platform', value: 'Spotify' },
-    ],
-  },
-  {
-    id: 6,
-    artist: 'Mishaal Tamer',
-    label: 'Artist',
-    category: 'Artist',
-    campaignType: 'Paid Advertising',
-    color: '#FF4D00',
-    stats: [
-      { label: 'Streams', value: '250K+', highlight: true },
-      { label: 'Ad Spend', value: '$5K' },
-      { label: 'Platforms', value: '3' },
-      { label: 'Blended CPA', value: '$0.14' },
+      { label: 'Store Launch', value: '6 Weeks', highlight: true },
+      { label: 'Email Open Rate', value: '42%' },
+      { label: 'SMS CTR', value: '12.3%' },
+      { label: 'Repeat Rate', value: '38%' },
     ],
   },
 ];
 
 const CaseStudies = () => {
-  const [filter, setFilter] = useState<'All' | 'Artist' | 'Fan Page' | 'Client'>('All');
+  const [filter, setFilter] = useState<'All' | 'E-Commerce' | 'Shopify' | 'DTC'>('All');
 
   const filteredCaseStudies = filter === 'All' ? caseStudies : caseStudies.filter((cs) => cs.category === filter);
 
@@ -122,25 +80,24 @@ const CaseStudies = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-accent text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Proven Results</span>
+          <span className="text-accent text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Client Results</span>
           <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4">
-            Case <span className="gradient-text">Studies</span>
+            Built to <span className="gradient-text">Scale</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">
-            Real campaigns. Real numbers. Billions of streams and millions in revenue.
+            Real brands. Real systems. Real revenue growth.
           </p>
         </div>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {(['All', 'Artists', 'Fan Pages', 'Clients'] as const).map((label) => {
-            const filterValue = label === 'Artists' ? 'Artist' : label === 'Fan Pages' ? 'Fan Page' : label === 'Clients' ? 'Client' : 'All';
-            const isActive = filter === filterValue;
+          {(['All', 'E-Commerce', 'Shopify', 'DTC'] as const).map((label) => {
+            const isActive = filter === label;
 
             return (
               <button
                 key={label}
-                onClick={() => setFilter(filterValue)}
+                onClick={() => setFilter(label)}
                 className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
                   isActive
                     ? 'bg-accent text-white'
@@ -187,15 +144,7 @@ const CaseStudies = () => {
 
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4 z-10">
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-                        caseStudy.category === 'Artist'
-                          ? 'bg-accent/20 text-accent'
-                          : caseStudy.category === 'Fan Page'
-                          ? 'bg-orange/20 text-orange'
-                          : 'bg-white/10 text-white'
-                      }`}
-                    >
+                    <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-accent/20 text-accent">
                       {caseStudy.category}
                     </span>
                   </div>
@@ -214,9 +163,9 @@ const CaseStudies = () => {
                 {/* Content Section */}
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-1 transition-colors duration-300 text-white">
-                    {caseStudy.artist}
+                    {caseStudy.brand}
                   </h3>
-                  <p className="text-sm text-gray-500 uppercase tracking-wider mb-5">{caseStudy.label}</p>
+                  <p className="text-sm text-gray-500 uppercase tracking-wider mb-5">{caseStudy.industry}</p>
 
                   {/* Stats Grid */}
                   <div className="grid grid-cols-2 gap-3 flex-grow">
@@ -245,7 +194,7 @@ const CaseStudies = () => {
             onClick={scrollToContact}
             className="inline-flex items-center gap-2 text-accent hover:text-orange transition-colors text-base font-semibold cursor-pointer bg-transparent border-none"
           >
-            See results like these for your artists
+            Build systems like these for your brand
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
