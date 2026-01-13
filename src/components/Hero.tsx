@@ -1,36 +1,26 @@
 import { useState } from 'react';
 
 const partners = [
-  { name: 'Empire', category: 'Artist', color: '#E31937', textColor: '#fff', font: 'Montserrat', fontSize: '1.1rem', fontWeight: '800', letterSpacing: '0.08em' },
-  { name: 'Republic Records', category: 'Artist', color: '#FF6B00', textColor: '#fff', font: "'Helvetica Neue', Arial, sans-serif", fontSize: '0.85rem', fontWeight: '700', letterSpacing: '0.08em' },
-  { name: 'Netflix', category: 'Fan Page', color: '#E50914', textColor: '#fff', font: 'Bebas Neue', fontSize: '1.6rem', fontWeight: '400', letterSpacing: '0.05em' },
-  { name: 'Universal Music Group', category: 'Artist', color: '#FF4D00', textColor: '#fff', font: 'Arial', fontSize: '0.75rem', fontWeight: '800', letterSpacing: '0.05em' },
-  { name: 'Sony', category: 'Client', color: '#2196F3', textColor: '#fff', font: "'Helvetica Neue', Arial, sans-serif", fontSize: '1.3rem', fontWeight: '700', letterSpacing: '0.12em' },
-  { name: 'Live Nation', category: 'Fan Page', color: '#FF4081', textColor: '#fff', font: 'Montserrat', fontSize: '0.9rem', fontWeight: '800', letterSpacing: '0.02em' },
-  { name: 'Grassfed', category: 'Client', color: '#00C853', textColor: '#fff', font: 'Oswald', fontSize: '1.1rem', fontWeight: '600', letterSpacing: '0.08em' },
-  { name: 'CAA', category: 'Client', color: '#FF8C00', textColor: '#fff', font: 'Playfair Display', fontSize: '1.2rem', fontWeight: '700', letterSpacing: '0.18em' },
+  { name: 'Chuga', category: 'Client', color: '#FF6B00', textColor: '#fff', font: 'Montserrat', fontSize: '1.3rem', fontWeight: '700', letterSpacing: '0.08em' },
+  { name: 'AANM', category: 'Client', color: '#2196F3', textColor: '#fff', font: "'Helvetica Neue', Arial, sans-serif", fontSize: '1.4rem', fontWeight: '700', letterSpacing: '0.12em' },
+  { name: 'Portalba', category: 'Client', color: '#FF4D00', textColor: '#fff', font: 'Playfair Display', fontSize: '1.2rem', fontWeight: '600', letterSpacing: '0.1em' },
 ];
 
 const Hero = () => {
-  const [currentPartnerIndex, setCurrentPartnerIndex] = useState(2);
+  const [currentPartnerIndex, setCurrentPartnerIndex] = useState(0);
 
   const nextPartner = () => {
-    setCurrentPartnerIndex((prev) => (prev + 1) % Math.ceil(partners.length / 2));
+    setCurrentPartnerIndex((prev) => (prev + 1) % partners.length);
   };
 
   const prevPartner = () => {
-    setCurrentPartnerIndex((prev) => (prev - 1 + Math.ceil(partners.length / 2)) % Math.ceil(partners.length / 2));
+    setCurrentPartnerIndex((prev) => (prev - 1 + partners.length) % partners.length);
   };
 
-  const getVisiblePartners = () => {
-    const startIndex = currentPartnerIndex * 2;
-    return [partners[startIndex % partners.length], partners[(startIndex + 1) % partners.length]];
-  };
+  const currentPartner = partners[currentPartnerIndex];
 
-  const visiblePartners = getVisiblePartners();
-
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -123,33 +113,27 @@ const Hero = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center pt-20 pb-10">
         {/* Logo */}
         <div className="mb-6 md:mb-10 animate-fade-in-up">
-          <div className="text-6xl md:text-8xl font-display text-accent drop-shadow-[0_0_25px_rgba(255,77,0,0.3)]">
-            4LABS
-          </div>
-          <div className="text-sm md:text-base font-display tracking-[0.3em] text-white mt-2">
-            MUSIC
+          <div className="text-5xl md:text-7xl font-display text-accent drop-shadow-[0_0_25px_rgba(255,77,0,0.3)]">
+            SHOP YARD
           </div>
         </div>
 
         {/* Headline */}
         <div className="mb-8 md:mb-12 max-w-4xl animate-fade-in-up delay-100">
-          <h1 className="font-bold tracking-tight leading-[1.1] mb-6 text-white">
-            <span style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>Amplify Artist </span>
-            <span className="text-accent inline-block" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
-              Impact.
-            </span>
+          <h1 className="font-bold tracking-tight leading-[1.1] mb-6 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            As your online business grows, your systems need to{' '}
+            <span className="text-accent inline-block">grow with it.</span>
           </h1>
           <p className="text-gray-400 mx-auto leading-relaxed max-w-2xl text-lg md:text-xl">
-            Full-service music marketing for labels and artists
-            <br className="hidden md:block" />
-            <span className="text-white font-medium ml-1">who want real fans, not just numbers.</span>
+            We help e-commerce brands build the systems underneath their storefront,{' '}
+            <span className="text-white font-medium">so scale feels smooth, not fragile.</span>
           </p>
         </div>
 
         {/* Trusted Partners */}
         <div className="w-full max-w-6xl animate-fade-in-up delay-200">
           <p className="text-sm font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-accent mb-6 opacity-90">
-            Trusted By Industry Leaders
+            Trusted by ambitious brands like
           </p>
 
           {/* Partners Carousel */}
@@ -166,32 +150,29 @@ const Hero = () => {
               </button>
 
               <div className="flex gap-2 flex-1 justify-center">
-                {visiblePartners.map((partner, index) => (
-                  <div
-                    key={index}
-                    className="mobile-tile flex-1 max-w-[165px] relative flex items-center justify-center rounded-2xl border-2 overflow-hidden"
+                <div
+                  className="mobile-tile max-w-[200px] w-full relative flex items-center justify-center rounded-2xl border-2 overflow-hidden"
+                  style={{
+                    height: '75px',
+                    background: 'linear-gradient(160deg, rgba(25, 25, 40, 0.98) 0%, rgba(15, 15, 30, 0.95) 100%)',
+                    backdropFilter: 'blur(16px)',
+                    borderColor: currentPartner.color,
+                    boxShadow: `0 0 20px ${currentPartner.color}50`,
+                  }}
+                >
+                  <span
+                    className="relative z-10 text-center px-3"
                     style={{
-                      height: '75px',
-                      background: 'linear-gradient(160deg, rgba(25, 25, 40, 0.98) 0%, rgba(15, 15, 30, 0.95) 100%)',
-                      backdropFilter: 'blur(16px)',
-                      borderColor: partner.color,
-                      boxShadow: `0 0 20px ${partner.color}50`,
+                      fontFamily: currentPartner.font,
+                      fontSize: currentPartner.fontSize,
+                      fontWeight: currentPartner.fontWeight,
+                      letterSpacing: currentPartner.letterSpacing,
+                      color: currentPartner.textColor,
                     }}
                   >
-                    <span
-                      className="relative z-10 text-center px-3"
-                      style={{
-                        fontFamily: partner.font,
-                        fontSize: partner.fontSize,
-                        fontWeight: partner.fontWeight,
-                        letterSpacing: partner.letterSpacing,
-                        color: partner.textColor,
-                      }}
-                    >
-                      {partner.name}
-                    </span>
-                  </div>
-                ))}
+                    {currentPartner.name}
+                  </span>
+                </div>
               </div>
 
               <button
@@ -207,13 +188,13 @@ const Hero = () => {
 
             {/* Indicators */}
             <div className="flex justify-center gap-2 mt-3">
-              {[...Array(Math.ceil(partners.length / 2))].map((_, i) => (
+              {partners.map((_, i) => (
                 <div
                   key={i}
                   className="h-1 rounded-full transition-all duration-500"
                   style={{
                     width: i === currentPartnerIndex ? '24px' : '8px',
-                    background: i === currentPartnerIndex ? 'linear-gradient(90deg, #2196F3, #FF4081)' : 'rgba(255, 255, 255, 0.2)',
+                    background: i === currentPartnerIndex ? 'linear-gradient(90deg, #FF6B00, #FF4D00)' : 'rgba(255, 255, 255, 0.2)',
                   }}
                 />
               ))}
@@ -221,42 +202,14 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-10 md:mb-14 animate-fade-in-up delay-300">
-          <div className="flex flex-col items-center">
-            <span className="text-3xl md:text-4xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-              2B+
-            </span>
-            <span className="text-xs md:text-sm font-medium text-gray-500 uppercase tracking-widest mt-1">
-              Streams
-            </span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-3xl md:text-4xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-              10B+
-            </span>
-            <span className="text-xs md:text-sm font-medium text-gray-500 uppercase tracking-widest mt-1">
-              Views
-            </span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-3xl md:text-4xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-              250+
-            </span>
-            <span className="text-xs md:text-sm font-medium text-gray-500 uppercase tracking-widest mt-1">
-              Artists
-            </span>
-          </div>
-        </div>
-
         {/* CTA Button */}
         <div className="animate-fade-in-up delay-400">
           <button
-            onClick={scrollToContact}
+            onClick={() => scrollToSection('how-it-works')}
             className="group relative inline-flex items-center justify-center bg-gradient-to-r from-accent to-orange text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,77,0,0.4)]"
             style={{ padding: 'clamp(12px, 2vh, 16px) clamp(32px, 4vw, 48px)', fontSize: 'clamp(1rem, 1.5vw, 1.25rem)' }}
           >
-            <span className="relative z-10 uppercase tracking-wider">Get Started</span>
+            <span className="relative z-10 uppercase tracking-wider">Learn More</span>
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </button>
         </div>
