@@ -223,7 +223,7 @@ const Contact = () => {
                 {/* Step 2: Budget & Timeline */}
                 {currentStep === 1 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-black">Budget text-white">Budget & Timeline Timeline</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-black">Budget & Timeline</h3>
                     <div className="space-y-4">
                       <div>
                         <label className="block text-sm font-semibold text-gray-300 mb-2">Budget *</label>
