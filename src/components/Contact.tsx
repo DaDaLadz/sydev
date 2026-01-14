@@ -29,21 +29,21 @@ const Contact = () => {
   });
 
   const roles = ['Brand Owner', 'CMO/Marketing Lead', 'Agency Partner', 'E-Commerce Manager', 'Investor', 'Other'];
-  const services = ['Store Build/Migration', 'Paid Ads & Analytics', 'Email & SMS Automation', 'Branding & Creative', 'CRO & Optimization'];
+  const services = ['Store Design & Setup', 'Development & Technical', 'Optimization & Growth', 'Strategic Consulting'];
   const budgets = ['Under $10K/mo', '$10K-$25K/mo', '$25K-$50K/mo', '$50K-$100K/mo', '$100K+/mo', 'One-Time Project'];
   const timelines = ['ASAP', '2-4 Weeks', '1-2 Months', '3+ Months', 'Flexible'];
 
-  const totalSteps = 4;
+  const totalSteps = 3;
 
   const canProceed = () => {
     if (currentStep === 0) {
-      return formData.name && formData.email && formData.role;
+      return formData.name && formData.email && formData.services.length > 0;
     }
     if (currentStep === 1) {
-      return formData.services.length > 0;
+      return formData.budget && formData.timeline;
     }
     if (currentStep === 2) {
-      return formData.budget && formData.timeline;
+      return true;
     }
     return true;
   };
@@ -81,67 +81,41 @@ const Contact = () => {
 
   const handleSubmit = () => {
     console.log('Form submitted:', formData);
-    alert('Thank you! We will be in touch within 24 hours.');
+    alert('Thank you! We will be in touch soon to discuss your project.');
   };
 
   return (
-    <section id="contact" className="section-padding bg-dark relative overflow-hidden">
+    <section id="contact" className="section-padding bg-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-accent-light/15 via-orange/5 to-transparent"></div>
-      <div className="absolute top-0 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-orange-light/12 blur-[80px] rounded-full will-change-transform"></div>
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255, 107, 44, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 44, 0.6) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-        }}
-      ></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-green/10 via-green/5 to-transparent"></div>
+      <div className="absolute top-0 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-green/8 blur-[80px] rounded-full"></div>
 
       <div className="relative max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 items-start">
           {/* Left Column */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="section-title mb-6">
-              Let's Build <span className="gradient-text">Together</span>
+            <h2 className="section-title mb-6 text-white">
+              Let's Build <span className="text-green">Together</span>
             </h2>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-              Ready to scale your Shopify store? Book a discovery call or tell us about your project. We'll get back to you within 24 hours.
+              Ready to scale your Shopify store? Tell us about your project and we'll create a custom plan for your business.
             </p>
-            <a
-              href="mailto:hello@shopyard.com"
-              className="btn-primary inline-flex items-center gap-3 mb-6"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Us Directly
-            </a>
-            <p className="text-gray-500">Or fill out the form to get a custom proposal.</p>
 
             <div className="mt-12 pt-8 border-t border-gray-800">
-              <div className="flex items-center gap-8">
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                  </svg>
-                  <span className="text-sm text-gray-400">24hr Response</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                  </svg>
-                  <span className="text-sm text-gray-400">Free Consultation</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+                <span className="text-sm text-gray-400">Free Consultation</span>
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-card rounded-2xl border border-gray-800 p-4 sm:p-8 w-full max-w-full overflow-hidden">
+          <div className="bg-black/50 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 w-full max-w-full overflow-hidden">
             <div className="mb-4 sm:mb-6">
-              <h3 className="text-xl sm:text-3xl font-display uppercase mb-2">
-                Start Your <span className="gradient-text">Project</span>
+              <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-white">
+                Start Your <span className="text-green">Project</span>
               </h3>
               <p className="text-gray-400 text-sm sm:text-base">Tell us what you're building.</p>
             </div>
@@ -153,7 +127,7 @@ const Contact = () => {
                   <div key={index} className="flex items-center flex-1">
                     <button
                       className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all flex-shrink-0 ${
-                        index <= currentStep ? 'bg-accent text-white' : 'bg-gray-700 text-gray-500'
+                        index <= currentStep ? 'bg-green text-black' : 'bg-gray-700 text-gray-500'
                       }`}
                     >
                       {index + 1}
@@ -161,7 +135,7 @@ const Contact = () => {
                     {index < totalSteps - 1 && (
                       <div
                         className={`flex-1 h-0.5 mx-2 transition-all rounded ${
-                          index < currentStep ? 'bg-accent' : 'bg-gray-700'
+                          index < currentStep ? 'bg-green' : 'bg-gray-700'
                         }`}
                       />
                     )}
@@ -210,20 +184,21 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2">I am a... *</label>
-                        <div className="grid grid-cols-2 gap-2">
-                          {roles.map((role) => (
+                        <label className="block text-sm font-semibold text-gray-300 mb-2">Desired Services *</label>
+                        <p className="text-xs text-gray-500 mb-2">Select all that apply</p>
+                        <div className="grid grid-cols-1 gap-2">
+                          {services.map((service) => (
                             <button
-                              key={role}
+                              key={service}
                               type="button"
-                              onClick={() => handleRoleSelect(role)}
-                              className={`p-3 rounded-lg border text-sm font-medium transition-all ${
-                                formData.role === role
-                                  ? 'border-accent bg-accent/20 text-white'
+                              onClick={() => handleServiceToggle(service)}
+                              className={`p-3 rounded-lg border text-sm font-medium transition-all text-left ${
+                                formData.services.includes(service)
+                                  ? 'border-green bg-green/20 text-white'
                                   : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
                               }`}
                             >
-                              {role}
+                              {service}
                             </button>
                           ))}
                         </div>
@@ -245,32 +220,8 @@ const Contact = () => {
                   </div>
                 )}
 
-                {/* Step 2: Services */}
+                {/* Step 2: Budget & Timeline */}
                 {currentStep === 1 && (
-                  <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">What Do You Need?</h3>
-                    <p className="text-sm text-gray-400">Select all that apply</p>
-                    <div className="space-y-2">
-                      {services.map((service) => (
-                        <button
-                          key={service}
-                          type="button"
-                          onClick={() => handleServiceToggle(service)}
-                          className={`w-full p-4 rounded-lg border text-left text-sm font-medium transition-all ${
-                            formData.services.includes(service)
-                              ? 'border-accent bg-accent/20 text-white'
-                              : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
-                          }`}
-                        >
-                          {service}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 3: Budget & Timeline */}
-                {currentStep === 2 && (
                   <div className="space-y-4">
                     <h3 className="text-lg sm:text-2xl font-bold text-white">Budget & Timeline</h3>
                     <div className="space-y-4">
@@ -284,7 +235,7 @@ const Contact = () => {
                               onClick={() => handleBudgetSelect(budget)}
                               className={`p-3 rounded-lg border text-sm font-medium transition-all ${
                                 formData.budget === budget
-                                  ? 'border-accent bg-accent/20 text-white'
+                                  ? 'border-green bg-green/20 text-white'
                                   : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
                               }`}
                             >
@@ -303,7 +254,7 @@ const Contact = () => {
                               onClick={() => handleTimelineSelect(timeline)}
                               className={`p-3 rounded-lg border text-sm font-medium transition-all ${
                                 formData.timeline === timeline
-                                  ? 'border-accent bg-accent/20 text-white'
+                                  ? 'border-green bg-green/20 text-white'
                                   : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
                               }`}
                             >
@@ -316,8 +267,8 @@ const Contact = () => {
                   </div>
                 )}
 
-                {/* Step 4: Final Details */}
-                {currentStep === 3 && (
+                {/* Step 3: Final Details */}
+                {currentStep === 2 && (
                   <div className="space-y-4">
                     <h3 className="text-lg sm:text-2xl font-bold text-white">Tell Us More</h3>
                     <div className="space-y-3">
@@ -372,7 +323,7 @@ const Contact = () => {
                   type="button"
                   onClick={currentStep === totalSteps - 1 ? handleSubmit : handleNext}
                   disabled={!canProceed()}
-                  className="btn-primary text-sm py-2.5 px-5 flex items-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-green text-black font-bold rounded-xl px-5 py-2.5 text-sm flex items-center gap-1.5 hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {currentStep === totalSteps - 1 ? 'Submit' : 'Continue'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

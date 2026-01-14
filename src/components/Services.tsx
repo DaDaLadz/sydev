@@ -1,67 +1,23 @@
 const services = [
   {
-    title: 'Store Infrastructure & Optimization',
+    title: 'Store Design & Setup',
     description: 'Shopify store buildout, theme customization, app integrations, and conversion rate optimization. We handle the technical foundation so your store can scale without breaking.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-        />
-      </svg>
-    ),
-    reverse: false,
+    icon: '/icons/icon-storefront.png', // Icon #3 - Storefront + Infrastructure
   },
   {
-    title: 'Paid Ads & Analytics',
-    description: 'Meta, Google, TikTok campaigns built for performance. Full-funnel strategy, creative testing, and data-driven optimization to drive revenue, not just traffic.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-        />
-      </svg>
-    ),
-    reverse: true,
+    title: 'Development & Technical',
+    description: 'Custom development, technical integrations, and backend systems. We build the infrastructure that powers seamless e-commerce experiences.',
+    icon: '/icons/icon-cart-tools.png', // Icon #5 - Cart + Tools
   },
   {
-    title: 'Email & SMS Automation',
-    description: 'Klaviyo flows, segmentation, and lifecycle campaigns that turn browsers into buyers and one-time customers into repeat revenue streams.',
-    image: 'https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&h=600&fit=crop',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
-    ),
-    reverse: false,
+    title: 'Optimization & Growth',
+    description: 'Data-driven optimization, analytics, and growth strategies. We analyze, test, and refine every aspect of your store to maximize revenue.',
+    icon: '/icons/icon-analytics.png', // Icon #6 - Analytics + Growth
   },
   {
-    title: 'Branding & Creative',
-    description: 'Brand identity, product photography, ad creative, and landing page design. We build the visual and messaging system that makes your brand feel premium.',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-        />
-      </svg>
-    ),
-    reverse: true,
+    title: 'Strategic Consulting',
+    description: 'Expert guidance on e-commerce strategy, planning, and execution. We help you make the right decisions for sustainable, profitable growth.',
+    icon: '/icons/icon-pencil.png', // Icon #8 - Pencil
   },
 ];
 
@@ -74,76 +30,58 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-dark relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent-light/10 blur-[80px] rounded-full will-change-transform"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-orange-light/10 blur-[60px] rounded-full will-change-transform"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange/5 blur-[100px] rounded-full will-change-transform"></div>
+    <section id="services" className="section-padding bg-black relative overflow-hidden">
+      {/* Background Effects - Subtle green accents */}
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green/5 blur-[100px] rounded-full"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-green/5 blur-[80px] rounded-full"></div>
 
       <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 px-4">
-          <span className="text-accent text-xs sm:text-sm font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4 block">
+        <div className="text-center mb-12 md:mb-20 px-4">
+          <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-4 block">
             What We Do
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-display uppercase tracking-tight mb-3 sm:mb-4">
-            Four Pillars of <span className="gradient-text">E-Commerce Growth</span>
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight mb-4 text-white">
+            Four Pillars of <span className="text-green">E-Commerce Growth</span>
           </h2>
-          <p className="text-base sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             We build the systems underneath your Shopify store so growth feels intentional, not chaotic.
           </p>
         </div>
 
-        {/* Service Cards */}
-        <div className="space-y-8">
+        {/* 4-Quadrant Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
           {services.map((service, index) => (
-            <div key={index}>
-              <div
-                className={`group relative rounded-2xl overflow-hidden border border-gray-800 hover:border-accent/50 transition-colors duration-300 flex flex-col ${
-                  service.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-                }`}
-              >
-                {/* Image Section */}
-                <div className="relative w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    loading="eager"
-                    decoding="sync"
-                    className="w-full h-full object-cover transition-transform duration-500 scale-100 brightness-50"
-                  />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r from-card via-card/80 to-transparent md:hidden`}
-                  ></div>
-                  <div
-                    className={`absolute inset-0 ${
-                      service.reverse ? 'bg-gradient-to-l' : 'bg-gradient-to-r'
-                    } from-card via-card/50 to-transparent hidden md:block`}
-                  ></div>
+            <div
+              key={index}
+              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/10 hover:border-green/50 transition-all duration-300 hover:bg-white/10 flex flex-col items-center text-center"
+            >
+              {/* Icon */}
+              <div className="mb-6 transition-transform duration-300 group-hover:scale-110">
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                  onError={(e) => {
+                    // Fallback to placeholder if image not found
+                    e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"%3E%3Crect width="128" height="128" fill="%2392FD7B" opacity="0.2"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%2392FD7B" font-size="48"%3E?%3C/text%3E%3C/svg%3E';
+                  }}
+                />
+              </div>
 
-                  {/* Hover Icon */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-20 h-20 rounded-full bg-accent/30 border border-accent/50 flex items-center justify-center text-accent">
-                      {service.icon}
-                    </div>
-                  </div>
-                </div>
+              {/* Title */}
+              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-white group-hover:text-green transition-colors">
+                {service.title}
+              </h3>
 
-                {/* Content Section */}
-                <div className="w-full md:w-3/5 p-5 sm:p-8 md:p-12 bg-card flex flex-col justify-center">
-                  <div className="text-accent mb-3 sm:mb-4 md:hidden">{service.icon}</div>
-                  <h3 className="text-xl sm:text-2xl md:text-4xl font-display uppercase mb-3 sm:mb-4 group-hover:text-accent transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+              {/* Description */}
+              <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+                {service.description}
+              </p>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-0">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent-light/10 to-orange-light/10"></div>
-                </div>
+              {/* Subtle glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-br from-green/10 to-transparent rounded-2xl"></div>
               </div>
             </div>
           ))}
@@ -151,7 +89,10 @@ const Services = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button onClick={scrollToContact} className="btn-secondary inline-block">
+          <button
+            onClick={scrollToContact}
+            className="inline-flex items-center justify-center bg-green text-black font-bold rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(146,253,123,0.4)] transition-all duration-300"
+          >
             Start a Conversation
           </button>
         </div>

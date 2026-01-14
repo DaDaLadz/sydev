@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 type CaseStudy = {
   id: number;
   brand: string;
@@ -60,10 +58,6 @@ const caseStudies: CaseStudy[] = [
 ];
 
 const CaseStudies = () => {
-  const [filter, setFilter] = useState<'All' | 'E-Commerce' | 'Shopify' | 'DTC'>('All');
-
-  const filteredCaseStudies = filter === 'All' ? caseStudies : caseStudies.filter((cs) => cs.category === filter);
-
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -72,47 +66,26 @@ const CaseStudies = () => {
   };
 
   return (
-    <section id="case-studies" className="section-padding bg-midnight relative overflow-hidden">
+    <section id="case-studies" className="section-padding bg-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-light/10 rounded-full blur-[80px] will-change-transform"></div>
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-orange-light/8 rounded-full blur-[70px] will-change-transform"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green/5 rounded-full blur-[80px]"></div>
+      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-green/5 rounded-full blur-[70px]"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-accent text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Client Results</span>
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4">
-            Built to <span className="gradient-text">Scale</span>
+          <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Client Results</span>
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-white">
+            Built to <span className="text-green">Scale</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">
             Real brands. Real systems. Real revenue growth.
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {(['All', 'E-Commerce', 'Shopify', 'DTC'] as const).map((label) => {
-            const isActive = filter === label;
-
-            return (
-              <button
-                key={label}
-                onClick={() => setFilter(label)}
-                className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
-                  isActive
-                    ? 'bg-accent text-white'
-                    : 'bg-card border border-gray-700 text-gray-400 hover:border-accent/50 hover:text-white'
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Case Study Cards */}
+        {/* Case Study Cards - All displayed, no filters */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCaseStudies.map((caseStudy) => (
+          {caseStudies.map((caseStudy) => (
             <div key={caseStudy.id} className="relative cursor-pointer group h-full">
               <div className="h-full bg-card rounded-2xl overflow-hidden border transition-all duration-500 flex flex-col border-gray-800/50 hover:border-gray-700">
                 {/* Icon/Visual Section */}
@@ -144,7 +117,7 @@ const CaseStudies = () => {
 
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-accent/20 text-accent">
+                    <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-green/20 text-green">
                       {caseStudy.category}
                     </span>
                   </div>
@@ -173,7 +146,7 @@ const CaseStudies = () => {
                       <div key={index} className="text-center bg-gray-900/40 rounded-xl py-3 px-2">
                         <div
                           className={`text-xl md:text-2xl font-bold ${
-                            stat.highlight ? 'gradient-text' : 'text-white'
+                            stat.highlight ? 'text-green' : 'text-white'
                           }`}
                         >
                           {stat.value}
@@ -192,7 +165,7 @@ const CaseStudies = () => {
         <div className="text-center mt-12">
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center gap-2 text-accent hover:text-orange transition-colors text-base font-semibold cursor-pointer bg-transparent border-none"
+            className="inline-flex items-center gap-2 text-green hover:text-white transition-colors text-base font-semibold cursor-pointer bg-transparent border-none"
           >
             Build systems like these for your brand
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

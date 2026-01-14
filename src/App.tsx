@@ -8,13 +8,13 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-midnight overflow-x-hidden">
+    <div className="min-h-screen bg-black overflow-x-hidden">
       <Navigation />
       <Hero />
       <Services />
       <CaseStudies />
-      <FAQ />
       <Contact />
+      <FAQ />
       <Footer />
     </div>
   );

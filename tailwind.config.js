@@ -7,25 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        midnight: '#0a0a12',
-        dark: '#080810',
-        card: '#0f0f1a',
-        accent: {
-          DEFAULT: '#FF4D00',
-          light: '#FF6B2C',
-        },
-        orange: {
-          DEFAULT: '#FF8C00',
-          light: '#FFA500',
-        },
+        green: '#92FD7B',
+        black: '#000',
+        white: '#FFF',
+        // Legacy colors for gradual transition
+        midnight: '#000',
+        dark: '#000',
+        card: '#000',
       },
       fontFamily: {
-        display: ['Bebas Neue', 'sans-serif'],
-        sans: ['Inter', 'sans-serif'],
+        display: ['Chinese Rocks', 'Impact', 'sans-serif'],
+        sans: ['Chinese Rocks', 'Impact', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out',
         'bounce': 'bounce 2s infinite',
+        'tape-wave-1': 'tapeWave1 3s ease-in-out infinite',
+        'tape-wave-2': 'tapeWave2 3.5s ease-in-out infinite',
+        'tape-wave-3': 'tapeWave3 4s ease-in-out infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -37,6 +36,18 @@ export default {
             opacity: '1',
             transform: 'translateY(0)',
           },
+        },
+        tapeWave1: {
+          '0%, 100%': { transform: 'translateY(0) rotate(-1deg)' },
+          '50%': { transform: 'translateY(-5px) rotate(1deg)' },
+        },
+        tapeWave2: {
+          '0%, 100%': { transform: 'translateY(0) rotate(1deg)' },
+          '50%': { transform: 'translateY(-3px) rotate(-0.5deg)' },
+        },
+        tapeWave3: {
+          '0%, 100%': { transform: 'translateY(0) rotate(-0.5deg)' },
+          '50%': { transform: 'translateY(-4px) rotate(0.5deg)' },
         },
       },
     },
