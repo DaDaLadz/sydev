@@ -85,7 +85,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-black relative overflow-hidden">
+    <section id="contact" className="section-padding bg-gray-50 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-green/10 via-green/5 to-transparent"></div>
       <div className="absolute top-0 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-green/8 blur-[80px] rounded-full"></div>
@@ -94,30 +94,30 @@ const Contact = () => {
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 items-start">
           {/* Left Column */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="section-title mb-6 text-white">
+            <h2 className="section-title mb-6 text-black">
               Let's Build <span className="text-green">Together</span>
             </h2>
-            <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Ready to scale your Shopify store? Tell us about your project and we'll create a custom plan for your business.
             </p>
 
-            <div className="mt-12 pt-8 border-t border-gray-800">
+            <div className="mt-12 pt-8 border-t border-gray-300">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
-                <span className="text-sm text-gray-400">Free Consultation</span>
+                <span className="text-sm text-gray-700">Free Consultation</span>
               </div>
             </div>
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-black/50 backdrop-blur-sm rounded-2xl border border-gray-800 p-4 sm:p-8 w-full max-w-full overflow-hidden">
+          <div className="bg-white backdrop-blur-sm rounded-2xl border border-gray-200 p-4 sm:p-8 w-full max-w-full overflow-hidden shadow-lg">
             <div className="mb-4 sm:mb-6">
-              <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-white">
+              <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-black">
                 Start Your <span className="text-green">Project</span>
               </h3>
-              <p className="text-gray-400 text-sm sm:text-base">Tell us what you're building.</p>
+              <p className="text-gray-700 text-sm sm:text-base">Tell us what you're building.</p>
             </div>
 
             {/* Progress Indicator */}
@@ -148,7 +148,7 @@ const Contact = () => {
                 {/* Step 1: About You */}
                 {currentStep === 0 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">About You</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-black">About You</h3>
                     <div className="space-y-3">
                       <div>
                         <label className="block text-sm font-semibold text-gray-300 mb-1.5">Your Name *</label>
@@ -223,7 +223,7 @@ const Contact = () => {
                 {/* Step 2: Budget & Timeline */}
                 {currentStep === 1 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">Budget & Timeline</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-black">Budget text-white">Budget & Timeline Timeline</h3>
                     <div className="space-y-4">
                       <div>
                         <label className="block text-sm font-semibold text-gray-300 mb-2">Budget *</label>
@@ -270,7 +270,7 @@ const Contact = () => {
                 {/* Step 3: Final Details */}
                 {currentStep === 2 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">Tell Us More</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-black">Tell Us More</h3>
                     <div className="space-y-3">
                       <div>
                         <label className="block text-sm font-semibold text-gray-300 mb-1.5">
@@ -310,7 +310,7 @@ const Contact = () => {
                     <button
                       type="button"
                       onClick={handlePrev}
-                      className="text-gray-400 hover:text-white transition-colors text-sm py-2.5 px-5 flex items-center gap-1.5 bg-transparent border-none cursor-pointer"
+                      className="text-gray-400 hover:text-black transition-colors text-sm py-2.5 px-5 flex items-center gap-1.5 bg-transparent border-none cursor-pointer"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />

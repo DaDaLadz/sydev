@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black border-t border-gray-800 py-16 px-4">
+    <footer className="bg-black border-t border-gray-700 py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Row */}
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500">
+        <div className="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500">
           <p>© 2025 Shop Yard. A 4Labs Digital Company. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="/privacy" className="hover:text-green transition-colors">

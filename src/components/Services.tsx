@@ -30,7 +30,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-black relative overflow-hidden">
+    <section id="services" className="section-padding bg-gray-50 relative overflow-hidden">
       {/* Background Effects - Subtle green accents */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green/5 blur-[100px] rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-green/5 blur-[80px] rounded-full"></div>
@@ -41,10 +41,10 @@ const Services = () => {
           <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-4 block">
             What We Do
           </span>
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight mb-4 text-white">
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight mb-4 text-black">
             Four Pillars of <span className="text-green">E-Commerce Growth</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             We build the systems underneath your Shopify store so growth feels intentional, not chaotic.
           </p>
         </div>
@@ -54,7 +54,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/10 hover:border-green/50 transition-all duration-300 hover:bg-white/10 flex flex-col items-center text-center"
+              className="group relative bg-white backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-200 hover:border-green/50 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center"
             >
               {/* Icon */}
               <div className="mb-6 transition-transform duration-300 group-hover:scale-110">
@@ -70,12 +70,12 @@ const Services = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-white group-hover:text-green transition-colors">
+              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-black group-hover:text-green transition-colors">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 {service.description}
               </p>
 

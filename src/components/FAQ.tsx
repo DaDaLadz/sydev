@@ -46,7 +46,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="section-padding bg-midnight relative overflow-hidden">
+    <section id="faq" className="section-padding bg-white relative overflow-hidden">
       {/* Background Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/8 blur-[80px] rounded-full will-change-transform"></div>
 
