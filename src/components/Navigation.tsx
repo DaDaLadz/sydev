@@ -18,14 +18,14 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/logos/logo-icon-green.png"
+              src="/logos/logo-black.png"
               alt="Shop Yard"
               className="h-12 sm:h-14 w-auto"
               onError={(e) => {
                 // Fallback to text if logo not found
                 e.currentTarget.style.display = 'none';
                 const text = document.createElement('span');
-                text.className = 'text-2xl font-display text-green';
+                text.className = 'text-2xl font-display text-black';
                 text.textContent = 'SY';
                 e.currentTarget.parentElement?.appendChild(text);
               }}

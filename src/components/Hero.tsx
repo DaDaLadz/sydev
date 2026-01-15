@@ -13,7 +13,14 @@ const Hero = () => {
     <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-white"></div>
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/bg-grey.png)',
+            backgroundColor: '#fff', // Fallback color
+          }}
+        ></div>
 
         {/* Subtle Green Accent Orbs */}
         <div className="absolute inset-0">
@@ -53,7 +60,7 @@ const Hero = () => {
               e.currentTarget.nextElementSibling?.classList.remove('hidden');
             }}
           />
-          <div className="hidden text-5xl md:text-7xl font-display text-green">
+          <div className="hidden text-5xl md:text-7xl font-display text-white">
             SHOP YARD
           </div>
         </div>
@@ -62,7 +69,7 @@ const Hero = () => {
         <div className="mb-12 md:mb-16 max-w-4xl animate-fade-in-up delay-100">
           <h1 className="font-bold tracking-tight leading-[1.1] mb-6 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             As your online business grows, your systems need to{' '}
-            <span className="text-green inline-block">grow with it.</span>
+            <span className="text-white inline-block">grow with it.</span>
           </h1>
           <p className="text-gray-700 mx-auto leading-relaxed max-w-2xl text-lg md:text-xl">
             We help e-commerce brands build the systems underneath their storefront,{' '}

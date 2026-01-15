@@ -95,7 +95,7 @@ const Contact = () => {
           {/* Left Column */}
           <div className="lg:sticky lg:top-24">
             <h2 className="section-title mb-6 text-black">
-              Let's Build <span className="text-green">Together</span>
+              Let's Build <span className="text-white">Together</span>
             </h2>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Ready to scale your Shopify store? Tell us about your project and we'll create a custom plan for your business.
@@ -115,7 +115,7 @@ const Contact = () => {
           <div className="bg-white backdrop-blur-sm rounded-2xl border border-gray-200 p-4 sm:p-8 w-full max-w-full overflow-hidden shadow-lg">
             <div className="mb-4 sm:mb-6">
               <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-black">
-                Start Your <span className="text-green">Project</span>
+                Start Your <span className="text-white">Project</span>
               </h3>
               <p className="text-gray-700 text-sm sm:text-base">Tell us what you're building.</p>
             </div>

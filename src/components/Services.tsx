@@ -38,11 +38,11 @@ const Services = () => {
       <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-20 px-4">
-          <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-4 block">
+          <span className="text-white text-sm font-bold uppercase tracking-[0.3em] mb-4 block">
             What We Do
           </span>
           <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight mb-4 text-black">
-            Four Pillars of <span className="text-green">E-Commerce Growth</span>
+            Four Pillars of <span className="text-white">E-Commerce Growth</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             We build the systems underneath your Shopify store so growth feels intentional, not chaotic.
@@ -70,7 +70,7 @@ const Services = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-black group-hover:text-green transition-colors">
+              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-black transition-colors">
                 {service.title}
               </h3>
 
