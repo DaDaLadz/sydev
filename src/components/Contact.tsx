@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PackagingTape from './PackagingTape';
 
 type FormData = {
   name: string;
@@ -335,11 +334,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Packaging Tape Divider */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <PackagingTape />
       </div>
     </section>
   );
