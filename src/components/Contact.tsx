@@ -95,7 +95,7 @@ const Contact = () => {
           {/* Left Column */}
           <div className="lg:sticky lg:top-24">
             <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-6 text-white">
-              Let's Build <span className="text-white">Together</span>
+              Let's Build <span className="text-green">Together</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Ready to scale your Shopify store? Tell us about your project and we'll create a custom plan for your business.
@@ -115,7 +115,7 @@ const Contact = () => {
           <div className="bg-gray-800 backdrop-blur-sm rounded-2xl border border-gray-600 p-4 sm:p-8 w-full max-w-full overflow-hidden shadow-lg">
             <div className="mb-4 sm:mb-6">
               <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-white">
-                Start Your <span className="text-white">Project</span>
+                Start Your <span className="text-green">Project</span>
               </h3>
               <p className="text-gray-300 text-sm sm:text-base">Tell us what you're building.</p>
             </div>
@@ -323,7 +323,7 @@ const Contact = () => {
                   type="button"
                   onClick={currentStep === totalSteps - 1 ? handleSubmit : handleNext}
                   disabled={!canProceed()}
-                  className="bg-green text-black font-bold rounded-xl px-5 py-2.5 text-sm flex items-center gap-1.5 hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-green text-white font-bold rounded-xl px-5 py-2.5 text-sm flex items-center gap-1.5 hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {currentStep === totalSteps - 1 ? 'Submit' : 'Continue'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

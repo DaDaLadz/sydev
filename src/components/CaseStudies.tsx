@@ -74,9 +74,9 @@ const CaseStudies = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-white text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Client Results</span>
+          <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Client Results</span>
           <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-white">
-            Built to <span className="text-white">Scale</span>
+            Built to <span className="text-green">Scale</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl">
             Real brands. Real systems. Real revenue growth.

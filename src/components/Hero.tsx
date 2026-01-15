@@ -99,13 +99,13 @@ const Hero = () => {
 
         {/* Headline */}
         <div className="mb-12 md:mb-16 max-w-4xl animate-fade-in-up delay-100">
-          <h1 className="font-semibold tracking-tight leading-[1.1] mb-6 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="text-4xl md:text-6xl font-display uppercase tracking-tight leading-[1.1] mb-6 text-white">
             As your online business grows, your systems need to{' '}
-            <span className="text-white inline-block">grow with it.</span>
+            <span className="text-green inline-block">grow with it.</span>
           </h1>
           <p className="text-gray-300 mx-auto leading-relaxed max-w-2xl text-lg md:text-xl">
             We help e-commerce brands build the systems underneath their storefront,{' '}
-            <span className="text-white font-medium">so scale feels smooth, not fragile.</span>
+            <span className="text-green font-medium">so scale feels smooth, not fragile.</span>
           </p>
         </div>
 

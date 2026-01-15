@@ -38,11 +38,11 @@ const Services = () => {
       <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-20 px-4">
-          <span className="text-white text-sm font-bold uppercase tracking-[0.3em] mb-4 block">
+          <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-4 block">
             What We Do
           </span>
           <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight mb-4 text-white">
-            Four Pillars of <span className="text-white">E-Commerce Growth</span>
+            Four Pillars of <span className="text-green">E-Commerce Growth</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We build the systems underneath your Shopify store so growth feels intentional, not chaotic.
@@ -91,7 +91,7 @@ const Services = () => {
         <div className="text-center mt-16">
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center justify-center bg-green text-black font-bold rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(146,253,123,0.4)] transition-all duration-300"
+            className="inline-flex items-center justify-center bg-green text-white font-bold rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(1,138,106,0.4)] transition-all duration-300"
           >
             Start a Conversation
           </button>
