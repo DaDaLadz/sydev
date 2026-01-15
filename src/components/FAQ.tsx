@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PackagingTape from './PackagingTape';
 
 type FAQItem = {
   question: string;
@@ -73,7 +74,7 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-lg md:text-xl font-semibold pr-4 text-white">{faq.question}</h3>
+                  <h3 className="text-lg md:text-xl font-display uppercase tracking-tight pr-4 text-white">{faq.question}</h3>
                   <span
                     className={`flex-shrink-0 w-10 h-10 rounded-full border-2 border-green/50 flex items-center justify-center text-green text-2xl transition-all duration-300 ${
                       openIndex === index ? 'rotate-45 bg-green/20' : ''
@@ -87,12 +88,17 @@ const FAQ = () => {
                     openIndex === index ? 'max-h-96 mt-6' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-lg text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <p className="text-base text-gray-300 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Packaging Tape Divider */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <PackagingTape />
       </div>
     </section>
   );

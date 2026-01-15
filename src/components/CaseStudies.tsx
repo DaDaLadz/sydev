@@ -1,3 +1,5 @@
+import PackagingTape from './PackagingTape';
+
 type CaseStudy = {
   id: number;
   brand: string;
@@ -173,6 +175,11 @@ const CaseStudies = () => {
             </svg>
           </button>
         </div>
+      </div>
+
+      {/* Packaging Tape Divider */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <PackagingTape />
       </div>
     </section>
   );

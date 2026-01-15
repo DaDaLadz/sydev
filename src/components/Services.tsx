@@ -1,3 +1,5 @@
+import PackagingTape from './PackagingTape';
+
 const services = [
   {
     title: 'Store Design & Setup',
@@ -91,11 +93,16 @@ const Services = () => {
         <div className="text-center mt-16">
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center justify-center bg-green text-white font-bold rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(1,138,106,0.4)] transition-all duration-300"
+            className="inline-flex items-center justify-center bg-green text-white font-display rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(1,138,106,0.4)] transition-all duration-300"
           >
             Start a Conversation
           </button>
         </div>
+      </div>
+
+      {/* Packaging Tape Divider */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <PackagingTape />
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 const PackagingTape = () => {
   return (
-    <div className="w-full relative h-24 overflow-hidden flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
+    <div className="w-full relative h-12 overflow-hidden flex items-center justify-center gap-12 md:gap-16 lg:gap-24">
       {/* Vertical Tape Strip 1 */}
-      <div className="h-full w-12 md:w-16 bg-gray-600/40 shadow-lg relative">
+      <div className="h-full w-16 md:w-24 lg:w-32 bg-gray-600/40 shadow-lg relative">
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/5" />
         <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -16,7 +16,7 @@ const PackagingTape = () => {
       </div>
 
       {/* Vertical Tape Strip 2 */}
-      <div className="h-full w-12 md:w-16 bg-gray-600/40 shadow-lg relative">
+      <div className="h-full w-16 md:w-24 lg:w-32 bg-gray-600/40 shadow-lg relative">
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/5" />
         <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -30,7 +30,7 @@ const PackagingTape = () => {
       </div>
 
       {/* Vertical Tape Strip 3 */}
-      <div className="h-full w-12 md:w-16 bg-gray-600/40 shadow-lg relative">
+      <div className="h-full w-16 md:w-24 lg:w-32 bg-gray-600/40 shadow-lg relative">
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/5" />
         <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
           <defs>

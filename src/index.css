@@ -31,11 +31,11 @@
   }
 
   .btn-primary {
-    @apply bg-green text-white font-bold px-8 py-3 rounded-xl text-sm uppercase tracking-wider hover:shadow-[0_0_40px_rgba(1,138,106,0.4)] transition-all duration-300 hover:scale-105 border-none cursor-pointer;
+    @apply bg-green text-white font-display px-8 py-3 rounded-xl text-sm uppercase tracking-wider hover:shadow-[0_0_40px_rgba(1,138,106,0.4)] transition-all duration-300 hover:scale-105 border-none cursor-pointer;
   }
 
   .btn-secondary {
-    @apply bg-transparent border-2 border-green text-green font-bold px-8 py-3 rounded-xl text-sm uppercase tracking-wider hover:bg-green hover:text-white transition-all duration-300 cursor-pointer;
+    @apply bg-transparent border-2 border-green text-green font-display px-8 py-3 rounded-xl text-sm uppercase tracking-wider hover:bg-green hover:text-white transition-all duration-300 cursor-pointer;
   }
 
   .input-field {

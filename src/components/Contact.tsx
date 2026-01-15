@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PackagingTape from './PackagingTape';
 
 type FormData = {
   name: string;
@@ -323,7 +324,7 @@ const Contact = () => {
                   type="button"
                   onClick={currentStep === totalSteps - 1 ? handleSubmit : handleNext}
                   disabled={!canProceed()}
-                  className="bg-green text-white font-bold rounded-xl px-5 py-2.5 text-sm flex items-center gap-1.5 hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-green text-white font-display rounded-xl px-5 py-2.5 text-sm flex items-center gap-1.5 hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider"
                 >
                   {currentStep === totalSteps - 1 ? 'Submit' : 'Continue'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -334,6 +335,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Packaging Tape Divider */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <PackagingTape />
       </div>
     </section>
   );
