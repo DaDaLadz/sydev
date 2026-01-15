@@ -66,7 +66,7 @@ const CaseStudies = () => {
   };
 
   return (
-    <section id="case-studies" className="section-padding bg-gray-800 relative overflow-hidden">
+    <section id="case-studies" className="section-padding bg-gray-700 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green/5 rounded-full blur-[80px]"></div>
       <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-green/5 rounded-full blur-[70px]"></div>
@@ -143,7 +143,7 @@ const CaseStudies = () => {
                   {/* Stats Grid */}
                   <div className="grid grid-cols-2 gap-3 flex-grow">
                     {caseStudy.stats.map((stat, index) => (
-                      <div key={index} className="text-center bg-gray-900/40 rounded-xl py-3 px-2">
+                      <div key={index} className="text-center bg-gray-800/40 rounded-xl py-3 px-2">
                         <div
                           className={`text-xl md:text-2xl font-bold ${
                             stat.highlight ? 'text-white' : 'text-white'

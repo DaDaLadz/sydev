@@ -46,7 +46,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="section-padding bg-gray-800 relative overflow-hidden">
+    <section id="faq" className="section-padding bg-gray-700 relative overflow-hidden">
       {/* Background Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-green/5 blur-[80px] rounded-full will-change-transform"></div>
 
@@ -67,7 +67,7 @@ const FAQ = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div
-                className={`bg-gray-900 rounded-2xl border border-gray-700 p-6 cursor-pointer transition-all duration-300 ${
+                className={`bg-gray-800 rounded-2xl border border-gray-600 p-6 cursor-pointer transition-all duration-300 ${
                   openIndex === index ? 'border-green/50 shadow-lg' : ''
                 }`}
                 onClick={() => toggleFAQ(index)}

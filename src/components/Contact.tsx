@@ -85,7 +85,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gray-800 relative overflow-hidden">
+    <section id="contact" className="section-padding bg-gray-700 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-green/10 via-green/5 to-transparent"></div>
       <div className="absolute top-0 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-green/8 blur-[80px] rounded-full"></div>
@@ -112,7 +112,7 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-gray-900 backdrop-blur-sm rounded-2xl border border-gray-700 p-4 sm:p-8 w-full max-w-full overflow-hidden shadow-lg">
+          <div className="bg-gray-800 backdrop-blur-sm rounded-2xl border border-gray-600 p-4 sm:p-8 w-full max-w-full overflow-hidden shadow-lg">
             <div className="mb-4 sm:mb-6">
               <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-white">
                 Start Your <span className="text-white">Project</span>
@@ -127,7 +127,7 @@ const Contact = () => {
                   <div key={index} className="flex items-center flex-1">
                     <button
                       className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all flex-shrink-0 ${
-                        index <= currentStep ? 'bg-green text-black' : 'bg-gray-700 text-gray-500'
+                        index <= currentStep ? 'bg-green text-white' : 'bg-gray-600 text-gray-500'
                       }`}
                     >
                       {index + 1}
@@ -135,7 +135,7 @@ const Contact = () => {
                     {index < totalSteps - 1 && (
                       <div
                         className={`flex-1 h-0.5 mx-2 transition-all rounded ${
-                          index < currentStep ? 'bg-green' : 'bg-gray-700'
+                          index < currentStep ? 'bg-green' : 'bg-gray-600'
                         }`}
                       />
                     )}
@@ -195,7 +195,7 @@ const Contact = () => {
                               className={`p-3 rounded-lg border text-sm font-medium transition-all text-left ${
                                 formData.services.includes(service)
                                   ? 'border-green bg-green/20 text-white'
-                                  : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
+                                  : 'border-gray-600 bg-gray-700/50 hover:border-gray-500 text-gray-400'
                               }`}
                             >
                               {service}
@@ -236,7 +236,7 @@ const Contact = () => {
                               className={`p-3 rounded-lg border text-sm font-medium transition-all ${
                                 formData.budget === budget
                                   ? 'border-green bg-green/20 text-white'
-                                  : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
+                                  : 'border-gray-600 bg-gray-700/50 hover:border-gray-500 text-gray-400'
                               }`}
                             >
                               {budget}
@@ -255,7 +255,7 @@ const Contact = () => {
                               className={`p-3 rounded-lg border text-sm font-medium transition-all ${
                                 formData.timeline === timeline
                                   ? 'border-green bg-green/20 text-white'
-                                  : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 text-gray-400'
+                                  : 'border-gray-600 bg-gray-700/50 hover:border-gray-500 text-gray-400'
                               }`}
                             >
                               {timeline}

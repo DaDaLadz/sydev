@@ -18,7 +18,7 @@ const Hero = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(/bg-grey.png)',
-            backgroundColor: '#1f2937', // Fallback color - dark grey (gray-800)
+            backgroundColor: '#374151', // Fallback color - dark grey (gray-700)
           }}
         ></div>
 
@@ -34,7 +34,7 @@ const Hero = () => {
                 top: `${10 + i * 15}%`,
                 left: i === 0 ? '-10%' : i === 1 ? '50%' : 'auto',
                 right: i === 2 ? '-10%' : 'auto',
-                background: `radial-gradient(circle, rgba(146, 253, 123, 0.2) 0%, rgba(146, 253, 123, 0.1) 40%, transparent 70%)`,
+                background: `radial-gradient(circle, rgba(1, 138, 106, 0.2) 0%, rgba(1, 138, 106, 0.1) 40%, transparent 70%)`,
               }}
             />
           ))}
@@ -48,6 +48,38 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center pt-20 pb-32">
+        {/* Stacked Boxes - Left Side */}
+        <div className="absolute left-4 md:left-8 lg:left-16 bottom-32 md:bottom-40 hidden md:block pointer-events-none">
+          <div className="flex flex-col gap-2">
+            {[...Array(4)].map((_, i) => (
+              <div
+                key={`left-${i}`}
+                className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-gray-600/50 bg-gray-700/30 backdrop-blur-sm"
+                style={{
+                  transform: `translateX(${i * 8}px) translateY(${-i * 4}px)`,
+                  opacity: 0.6 + i * 0.1,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Stacked Boxes - Right Side */}
+        <div className="absolute right-4 md:right-8 lg:right-16 bottom-32 md:bottom-40 hidden md:block pointer-events-none">
+          <div className="flex flex-col gap-2">
+            {[...Array(4)].map((_, i) => (
+              <div
+                key={`right-${i}`}
+                className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-gray-600/50 bg-gray-700/30 backdrop-blur-sm"
+                style={{
+                  transform: `translateX(${-i * 8}px) translateY(${-i * 4}px)`,
+                  opacity: 0.6 + i * 0.1,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
         {/* Logo - User should add logo-color.png to /public/logos/ */}
         <div className="mb-8 md:mb-12 animate-fade-in-up">
           <img
@@ -67,7 +99,7 @@ const Hero = () => {
 
         {/* Headline */}
         <div className="mb-12 md:mb-16 max-w-4xl animate-fade-in-up delay-100">
-          <h1 className="font-bold tracking-tight leading-[1.1] mb-6 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="font-semibold tracking-tight leading-[1.1] mb-6 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             As your online business grows, your systems need to{' '}
             <span className="text-white inline-block">grow with it.</span>
           </h1>
@@ -81,7 +113,7 @@ const Hero = () => {
         <div className="animate-fade-in-up delay-200 mb-8">
           <button
             onClick={() => scrollToSection('contact')}
-            className="group relative inline-flex items-center justify-center bg-green text-black font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="group relative inline-flex items-center justify-center bg-green text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg"
             style={{ padding: 'clamp(12px, 2vh, 16px) clamp(32px, 4vw, 48px)', fontSize: 'clamp(1rem, 1.5vw, 1.25rem)' }}
           >
             <span className="relative z-10 uppercase tracking-wider">Book a Call</span>

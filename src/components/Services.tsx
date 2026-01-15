@@ -30,7 +30,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-gray-800 relative overflow-hidden">
+    <section id="services" className="section-padding bg-gray-700 relative overflow-hidden">
       {/* Background Effects - Subtle green accents */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green/5 blur-[100px] rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-green/5 blur-[80px] rounded-full"></div>
@@ -54,7 +54,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-gray-900 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-700 hover:border-green/50 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center"
+              className="group relative bg-gray-800 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-600 hover:border-green/50 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center"
             >
               {/* Icon */}
               <div className="mb-6 transition-transform duration-300 group-hover:scale-110">
