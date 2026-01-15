@@ -46,14 +46,14 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="section-padding bg-white relative overflow-hidden">
+    <section id="faq" className="section-padding bg-gray-800 relative overflow-hidden">
       {/* Background Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-green/5 blur-[80px] rounded-full will-change-transform"></div>
 
       <div className="relative max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-black">
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-white">
             Frequently Asked <span className="text-white">Questions</span>
           </h2>
         </div>
@@ -67,13 +67,13 @@ const FAQ = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div
-                className={`bg-white rounded-2xl border border-gray-200 p-6 cursor-pointer transition-all duration-300 ${
+                className={`bg-gray-900 rounded-2xl border border-gray-700 p-6 cursor-pointer transition-all duration-300 ${
                   openIndex === index ? 'border-green/50 shadow-lg' : ''
                 }`}
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-lg md:text-xl font-semibold pr-4 text-black">{faq.question}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold pr-4 text-white">{faq.question}</h3>
                   <span
                     className={`flex-shrink-0 w-10 h-10 rounded-full border-2 border-green/50 flex items-center justify-center text-green text-2xl transition-all duration-300 ${
                       openIndex === index ? 'rotate-45 bg-green/20' : ''
@@ -87,7 +87,7 @@ const FAQ = () => {
                     openIndex === index ? 'max-h-96 mt-6' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-lg text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <p className="text-lg text-gray-300 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>

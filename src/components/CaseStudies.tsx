@@ -66,7 +66,7 @@ const CaseStudies = () => {
   };
 
   return (
-    <section id="case-studies" className="section-padding bg-white relative overflow-hidden">
+    <section id="case-studies" className="section-padding bg-gray-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green/5 rounded-full blur-[80px]"></div>
       <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-green/5 rounded-full blur-[70px]"></div>
@@ -75,10 +75,10 @@ const CaseStudies = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <span className="text-white text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Client Results</span>
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-black">
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-white">
             Built to <span className="text-white">Scale</span>
           </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto text-lg md:text-xl">
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl">
             Real brands. Real systems. Real revenue growth.
           </p>
         </div>
