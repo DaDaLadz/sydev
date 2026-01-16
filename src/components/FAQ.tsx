@@ -46,7 +46,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="scroll-section section-padding relative overflow-hidden">
+    <section id="faq" className="scroll-section section-padding relative overflow-hidden z-40">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div

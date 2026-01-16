@@ -64,10 +64,12 @@
     animation-delay: 400ms;
   }
 
-  /* Scroll Animation - Sections rise/descend with smooth scroll effect */
+  /* Scroll Animation - Sections rise and stack over each other */
   .scroll-section {
+    position: sticky;
+    top: 0;
     opacity: 0;
-    transform: translateY(150px); /* Start from 150px below */
+    transform: translateY(100vh); /* Start from full viewport height below */
     transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
