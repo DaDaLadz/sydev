@@ -4,8 +4,8 @@ export const useScrollAnimation = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -20% 0px', // Trigger when section is 20% from bottom of viewport
-      threshold: 0.05, // Trigger as soon as 5% is visible
+      rootMargin: '0px 0px -12% 0px', // Trigger when section is 12% from bottom of viewport
+      threshold: 0.01, // Trigger as soon as 1% is visible
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
