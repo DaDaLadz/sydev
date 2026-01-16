@@ -39,7 +39,7 @@
   }
 
   .input-field {
-    @apply w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-green focus:outline-none focus:ring-2 focus:ring-green/50 transition-all;
+    @apply w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-black focus:border-green focus:outline-none focus:ring-2 focus:ring-green/50 transition-all;
   }
 }
 
@@ -64,11 +64,11 @@
     animation-delay: 400ms;
   }
 
-  /* Scroll Animation - Sections rise from bottom */
+  /* Scroll Animation - Sections rise/descend with full scroll effect */
   .scroll-section {
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(100vh); /* Start from full viewport height below */
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .scroll-section-visible {

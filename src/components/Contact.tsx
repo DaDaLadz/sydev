@@ -112,12 +112,12 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-gray-800 backdrop-blur-sm rounded-2xl border border-gray-600 p-4 sm:p-8 w-full max-w-full overflow-hidden shadow-lg">
+          <div className="backdrop-blur-sm rounded-2xl border border-gray-600 p-4 sm:p-8 w-full max-w-full overflow-hidden shadow-lg" style={{ backgroundColor: '#d8d9da' }}>
             <div className="mb-4 sm:mb-6">
-              <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-white">
+              <h3 className="text-xl sm:text-3xl font-sans uppercase mb-2 text-black">
                 Start Your <span className="text-green">Project</span>
               </h3>
-              <p className="text-white text-sm sm:text-base">Tell us what you're building.</p>
+              <p className="text-black text-sm sm:text-base">Tell us what you're building.</p>
             </div>
 
             {/* Progress Indicator */}
@@ -127,7 +127,7 @@ const Contact = () => {
                   <div key={index} className="flex items-center flex-1">
                     <button
                       className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all flex-shrink-0 ${
-                        index <= currentStep ? 'bg-green text-white' : 'bg-gray-600 text-gray-500'
+                        index <= currentStep ? 'bg-green text-white' : 'bg-gray-300 text-gray-600'
                       }`}
                     >
                       {index + 1}
@@ -135,7 +135,7 @@ const Contact = () => {
                     {index < totalSteps - 1 && (
                       <div
                         className={`flex-1 h-0.5 mx-2 transition-all rounded ${
-                          index < currentStep ? 'bg-green' : 'bg-gray-600'
+                          index < currentStep ? 'bg-green' : 'bg-gray-300'
                         }`}
                       />
                     )}
@@ -148,10 +148,10 @@ const Contact = () => {
                 {/* Step 1: About You */}
                 {currentStep === 0 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">About You</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-black">About You</h3>
                     <div className="space-y-3">
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">Your Name *</label>
+                        <label className="block text-sm font-semibold text-black mb-1.5">Your Name *</label>
                         <input
                           type="text"
                           name="name"
@@ -162,7 +162,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">Email *</label>
+                        <label className="block text-sm font-semibold text-black mb-1.5">Email *</label>
                         <input
                           type="email"
                           name="email"
@@ -173,7 +173,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">Phone (optional)</label>
+                        <label className="block text-sm font-semibold text-black mb-1.5">Phone (optional)</label>
                         <input
                           type="tel"
                           name="phone"
@@ -184,8 +184,8 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2">Desired Services *</label>
-                        <p className="text-xs text-gray-500 mb-2">Select all that apply</p>
+                        <label className="block text-sm font-semibold text-black mb-2">Desired Services *</label>
+                        <p className="text-xs text-gray-600 mb-2">Select all that apply</p>
                         <div className="grid grid-cols-1 gap-2">
                           {services.map((service) => (
                             <button
@@ -194,8 +194,8 @@ const Contact = () => {
                               onClick={() => handleServiceToggle(service)}
                               className={`p-3 rounded-lg border text-sm font-medium transition-all text-left ${
                                 formData.services.includes(service)
-                                  ? 'border-green bg-green/20 text-white'
-                                  : 'border-gray-600 bg-gray-700/50 hover:border-gray-500 text-gray-400'
+                                  ? 'border-green bg-green/20 text-black'
+                                  : 'border-gray-400 bg-gray-100 hover:border-gray-500 text-gray-700'
                               }`}
                             >
                               {service}
@@ -204,7 +204,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                        <label className="block text-sm font-semibold text-black mb-1.5">
                           Brand/Company Name (optional)
                         </label>
                         <input
@@ -223,10 +223,10 @@ const Contact = () => {
                 {/* Step 2: Budget & Timeline */}
                 {currentStep === 1 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">Budget & Timeline</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-black">Budget & Timeline</h3>
                     <div className="space-y-4">
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2">Budget *</label>
+                        <label className="block text-sm font-semibold text-black mb-2">Budget *</label>
                         <div className="grid grid-cols-2 gap-2">
                           {budgets.map((budget) => (
                             <button
@@ -235,8 +235,8 @@ const Contact = () => {
                               onClick={() => handleBudgetSelect(budget)}
                               className={`p-3 rounded-lg border text-sm font-medium transition-all ${
                                 formData.budget === budget
-                                  ? 'border-green bg-green/20 text-white'
-                                  : 'border-gray-600 bg-gray-700/50 hover:border-gray-500 text-gray-400'
+                                  ? 'border-green bg-green/20 text-black'
+                                  : 'border-gray-400 bg-gray-100 hover:border-gray-500 text-gray-700'
                               }`}
                             >
                               {budget}
@@ -245,7 +245,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-2">When do you want to start? *</label>
+                        <label className="block text-sm font-semibold text-black mb-2">When do you want to start? *</label>
                         <div className="grid grid-cols-2 gap-2">
                           {timelines.map((timeline) => (
                             <button
@@ -254,8 +254,8 @@ const Contact = () => {
                               onClick={() => handleTimelineSelect(timeline)}
                               className={`p-3 rounded-lg border text-sm font-medium transition-all ${
                                 formData.timeline === timeline
-                                  ? 'border-green bg-green/20 text-white'
-                                  : 'border-gray-600 bg-gray-700/50 hover:border-gray-500 text-gray-400'
+                                  ? 'border-green bg-green/20 text-black'
+                                  : 'border-gray-400 bg-gray-100 hover:border-gray-500 text-gray-700'
                               }`}
                             >
                               {timeline}
@@ -270,10 +270,10 @@ const Contact = () => {
                 {/* Step 3: Final Details */}
                 {currentStep === 2 && (
                   <div className="space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-white">Tell Us More</h3>
+                    <h3 className="text-lg sm:text-2xl font-bold text-black">Tell Us More</h3>
                     <div className="space-y-3">
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                        <label className="block text-sm font-semibold text-black mb-1.5">
                           What are your main goals?
                         </label>
                         <textarea
@@ -286,7 +286,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-gray-300 mb-1.5">
+                        <label className="block text-sm font-semibold text-black mb-1.5">
                           Anything else we should know?
                         </label>
                         <textarea
@@ -310,7 +310,7 @@ const Contact = () => {
                     <button
                       type="button"
                       onClick={handlePrev}
-                      className="text-gray-400 hover:text-white transition-colors text-sm py-2.5 px-5 flex items-center gap-1.5 bg-transparent border-none cursor-pointer"
+                      className="text-gray-600 hover:text-black transition-colors text-sm py-2.5 px-5 flex items-center gap-1.5 bg-transparent border-none cursor-pointer"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />

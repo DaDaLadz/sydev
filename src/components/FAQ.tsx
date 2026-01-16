@@ -78,7 +78,7 @@ const FAQ = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div
-                className={`bg-gray-800 rounded-2xl border border-gray-600 p-8 cursor-pointer transition-all duration-300 ${
+                className={`bg-black rounded-2xl border border-gray-600 p-8 cursor-pointer transition-all duration-300 ${
                   openIndex === index ? 'border-green/50 shadow-lg' : ''
                 }`}
                 onClick={() => toggleFAQ(index)}

@@ -4,14 +4,17 @@ export const useScrollAnimation = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
+      rootMargin: '-100px 0px -100px 0px', // Trigger further from viewport edges
+      threshold: 0.2, // Require more of element to be visible
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
+        // Add class when scrolling into view, remove when scrolling out
         if (entry.isIntersecting) {
           entry.target.classList.add('scroll-section-visible');
+        } else {
+          entry.target.classList.remove('scroll-section-visible');
         }
       });
     };

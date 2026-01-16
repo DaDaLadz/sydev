@@ -71,7 +71,7 @@ const Services = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-green transition-colors">
+              <h3 className="text-2xl md:text-3xl font-sans uppercase mb-4 text-green transition-colors">
                 {service.title}
               </h3>
 
