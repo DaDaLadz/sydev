@@ -22,7 +22,7 @@ const Hero = () => {
           }}
         ></div>
 
-        {/* Subtle Green Accent Orbs */}
+        {/* Subtle Orange Accent Orbs */}
         <div className="absolute inset-0">
           {[...Array(3)].map((_, i) => (
             <div
@@ -34,7 +34,7 @@ const Hero = () => {
                 top: `${10 + i * 15}%`,
                 left: i === 0 ? '-10%' : i === 1 ? '50%' : 'auto',
                 right: i === 2 ? '-10%' : 'auto',
-                background: `radial-gradient(circle, rgba(1, 138, 106, 0.2) 0%, rgba(1, 138, 106, 0.1) 40%, transparent 70%)`,
+                background: `radial-gradient(circle, rgba(255, 55, 1, 0.2) 0%, rgba(255, 55, 1, 0.1) 40%, transparent 70%)`,
               }}
             />
           ))}

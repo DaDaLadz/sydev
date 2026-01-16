@@ -53,7 +53,7 @@ const FAQ = () => {
       <div className="relative max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-white">
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-black">
             Frequently Asked <span className="text-green">Questions</span>
           </h2>
         </div>
@@ -73,7 +73,7 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-xl md:text-2xl font-display uppercase tracking-tight pr-4 text-white">{faq.question}</h3>
+                  <h3 className="text-xl md:text-2xl font-display uppercase tracking-tight pr-4 text-black">{faq.question}</h3>
                   <span
                     className={`flex-shrink-0 w-12 h-12 rounded-full border-2 border-green/50 flex items-center justify-center text-green text-3xl transition-all duration-300 ${
                       openIndex === index ? 'rotate-45 bg-green/20' : ''
@@ -87,7 +87,7 @@ const FAQ = () => {
                     openIndex === index ? 'max-h-96 mt-6' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-lg md:text-xl text-white leading-relaxed">{faq.answer}</p>
+                  <p className="text-lg md:text-xl text-black leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>

@@ -32,8 +32,8 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-gray-700 relative overflow-hidden">
-      {/* Background Effects - Subtle green accents */}
+    <section id="services" className="section-padding bg-black relative overflow-hidden">
+      {/* Background Effects - Subtle orange accents */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green/5 blur-[100px] rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-green/5 blur-[80px] rounded-full"></div>
 
@@ -93,7 +93,7 @@ const Services = () => {
         <div className="text-center mt-16">
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center justify-center bg-green text-white font-display rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(1,138,106,0.4)] transition-all duration-300"
+            className="inline-flex items-center justify-center bg-green text-white font-display rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(255,55,1,0.4)] transition-all duration-300"
           >
             Start a Conversation
           </button>

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        green: '#018a6a',
+        green: '#FF3701',
         black: '#000',
         white: '#FFF',
         // Legacy colors for gradual transition

@@ -77,10 +77,10 @@ const CaseStudies = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-3 block">Client Results</span>
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-white">
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-black">
             Built to <span className="text-green">Scale</span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl">
+          <p className="text-black max-w-2xl mx-auto text-lg md:text-xl">
             Real brands. Real systems. Real revenue growth.
           </p>
         </div>
@@ -137,10 +137,10 @@ const CaseStudies = () => {
 
                 {/* Content Section */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-1 transition-colors duration-300 text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-1 transition-colors duration-300 text-black">
                     {caseStudy.brand}
                   </h3>
-                  <p className="text-sm text-gray-500 uppercase tracking-wider mb-5">{caseStudy.industry}</p>
+                  <p className="text-sm text-gray-600 uppercase tracking-wider mb-5">{caseStudy.industry}</p>
 
                   {/* Stats Grid */}
                   <div className="grid grid-cols-2 gap-3 flex-grow">
@@ -148,12 +148,12 @@ const CaseStudies = () => {
                       <div key={index} className="text-center bg-gray-800/40 rounded-xl py-3 px-2">
                         <div
                           className={`text-xl md:text-2xl font-bold ${
-                            stat.highlight ? 'text-white' : 'text-white'
+                            stat.highlight ? 'text-black' : 'text-black'
                           }`}
                         >
                           {stat.value}
                         </div>
-                        <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">{stat.label}</div>
+                        <div className="text-xs text-gray-600 uppercase tracking-wider mt-1">{stat.label}</div>
                       </div>
                     ))}
                   </div>
@@ -167,7 +167,7 @@ const CaseStudies = () => {
         <div className="text-center mt-12">
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center gap-2 text-green hover:text-white transition-colors text-base font-semibold cursor-pointer bg-transparent border-none"
+            className="inline-flex items-center gap-2 text-green hover:text-black transition-colors text-base font-semibold cursor-pointer bg-transparent border-none"
           >
             Build systems like these for your brand
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

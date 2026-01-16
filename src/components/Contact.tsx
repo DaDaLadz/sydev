@@ -85,7 +85,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gray-700 relative overflow-hidden">
+    <section id="contact" className="section-padding bg-black relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-green/10 via-green/5 to-transparent"></div>
       <div className="absolute top-0 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-green/8 blur-[80px] rounded-full"></div>
@@ -97,7 +97,7 @@ const Contact = () => {
             <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-6 text-white">
               Let's Build <span className="text-green">Together</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-white mb-8 leading-relaxed">
               Ready to scale your Shopify store? Tell us about your project and we'll create a custom plan for your business.
             </p>
 
@@ -106,7 +106,7 @@ const Contact = () => {
                 <svg className="w-5 h-5 text-green" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
-                <span className="text-sm text-gray-300">Free Consultation</span>
+                <span className="text-sm text-white">Free Consultation</span>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ const Contact = () => {
               <h3 className="text-xl sm:text-3xl font-display uppercase mb-2 text-white">
                 Start Your <span className="text-green">Project</span>
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base">Tell us what you're building.</p>
+              <p className="text-white text-sm sm:text-base">Tell us what you're building.</p>
             </div>
 
             {/* Progress Indicator */}
