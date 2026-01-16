@@ -46,7 +46,18 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="section-padding bg-gray-700 relative overflow-hidden">
+    <section id="faq" className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/bg-grey.png)',
+            backgroundColor: '#374151', // Fallback color - dark grey (gray-700)
+          }}
+        ></div>
+      </div>
+
       {/* Background Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-green/5 blur-[80px] rounded-full will-change-transform"></div>
 

@@ -68,7 +68,18 @@ const CaseStudies = () => {
   };
 
   return (
-    <section id="case-studies" className="section-padding bg-gray-700 relative overflow-hidden">
+    <section id="case-studies" className="section-padding relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/bg-grey.png)',
+            backgroundColor: '#374151', // Fallback color - dark grey (gray-700)
+          }}
+        ></div>
+      </div>
+
       {/* Background Effects */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green/5 rounded-full blur-[80px]"></div>
       <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-green/5 rounded-full blur-[70px]"></div>
