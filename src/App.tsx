@@ -5,19 +5,25 @@ import CaseStudies from './components/CaseStudies';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { useScrollAnimation } from './hooks/useScrollAnimation';
 
 function App() {
-  useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-gray-700 overflow-x-hidden">
       <Navigation />
       <Hero />
-      <Services />
-      <CaseStudies />
-      <Contact />
-      <FAQ />
+      <div className="h-[200vh]">
+        <Services />
+      </div>
+      <div className="h-[200vh]">
+        <CaseStudies />
+      </div>
+      <div className="h-[200vh]">
+        <Contact />
+      </div>
+      <div className="h-[200vh]">
+        <FAQ />
+      </div>
       <Footer />
     </div>
   );
