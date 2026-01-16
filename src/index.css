@@ -64,11 +64,11 @@
     animation-delay: 400ms;
   }
 
-  /* Scroll Animation - Sections rise/descend with full scroll effect */
+  /* Scroll Animation - Sections rise/descend with smooth scroll effect */
   .scroll-section {
     opacity: 0;
-    transform: translateY(100vh); /* Start from full viewport height below */
-    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(150px); /* Start from 150px below */
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .scroll-section-visible {
