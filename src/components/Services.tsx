@@ -33,7 +33,8 @@ const Services = () => {
 
   return (
     <section id="services" className="section-padding bg-black relative overflow-hidden">
-      {/* Background Effects - Subtle orange accents */}
+      {/* Background Effects - Orange gradiation */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green/10 via-green/5 to-transparent"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green/5 blur-[100px] rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-green/5 blur-[80px] rounded-full"></div>
 
@@ -56,7 +57,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-gray-800 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-600 hover:border-green/50 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center"
+              className="group relative bg-gray-50 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-200 hover:border-green/50 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center"
             >
               {/* Icon */}
               <div className="mb-6 transition-transform duration-300 group-hover:scale-110">
@@ -72,12 +73,12 @@ const Services = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-white transition-colors">
+              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-black transition-colors">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+              <p className="text-base md:text-lg text-black leading-relaxed">
                 {service.description}
               </p>
 
