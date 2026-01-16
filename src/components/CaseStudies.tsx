@@ -66,7 +66,7 @@ const CaseStudies = () => {
   };
 
   return (
-    <section id="case-studies" className="sticky top-0 h-screen section-padding overflow-hidden z-20 rounded-tr-2xl rounded-tl-2xl">
+    <section id="case-studies" className="relative sticky top-0 h-screen section-padding overflow-hidden z-20 rounded-tr-2xl rounded-tl-2xl">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div

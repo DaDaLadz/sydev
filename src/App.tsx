@@ -12,10 +12,12 @@ function App() {
     <div className="min-h-screen bg-gray-700 overflow-x-hidden">
       <Navigation />
       <Hero />
-      <Services />
-      <CaseStudies />
-      <Contact />
-      <FAQ />
+      <div className="h-[400vh]">
+        <Services />
+        <CaseStudies />
+        <Contact />
+        <FAQ />
+      </div>
       <Footer />
     </div>
   );

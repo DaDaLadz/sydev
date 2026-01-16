@@ -30,7 +30,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="sticky top-0 h-screen section-padding bg-black overflow-hidden z-10">
+    <section id="services" className="relative sticky top-0 h-screen section-padding bg-black overflow-hidden z-10">
       {/* Background Effects - Orange gradiation */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green/10 via-green/5 to-transparent"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green/5 blur-[100px] rounded-full"></div>
