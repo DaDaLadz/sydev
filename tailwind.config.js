@@ -17,7 +17,8 @@ export default {
       },
       fontFamily: {
         display: ['Chinese Rocks', 'Impact', 'sans-serif'],
-        sans: ['Chinese Rocks', 'Impact', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out',

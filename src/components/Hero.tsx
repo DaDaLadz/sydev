@@ -46,25 +46,25 @@ const Hero = () => {
           <img
             src="/logos/logo-color.png"
             alt="Shop Yard"
-            className="h-24 md:h-32 lg:h-40 w-auto"
+            className="h-32 md:h-48 lg:h-56 w-auto"
             onError={(e) => {
               // Fallback to text if image not found
               e.currentTarget.style.display = 'none';
               e.currentTarget.nextElementSibling?.classList.remove('hidden');
             }}
           />
-          <div className="hidden text-5xl md:text-7xl font-display text-white">
+          <div className="hidden text-7xl md:text-9xl font-display text-white">
             SHOP YARD
           </div>
         </div>
 
         {/* Headline */}
-        <div className="mb-12 md:mb-16 max-w-4xl animate-fade-in-up delay-100">
-          <h1 className="text-4xl md:text-6xl font-display uppercase tracking-tight leading-[1.1] mb-6 text-black">
+        <div className="mb-12 md:mb-16 max-w-5xl animate-fade-in-up delay-100">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display uppercase tracking-tight leading-[1.1] mb-8 text-black">
             As your online business grows, your systems need to{' '}
             <span className="text-green inline-block">grow with it.</span>
           </h1>
-          <p className="text-black mx-auto leading-relaxed max-w-2xl text-lg md:text-xl">
+          <p className="text-black mx-auto leading-relaxed max-w-3xl text-xl md:text-2xl lg:text-3xl">
             We help e-commerce brands build the systems underneath their storefront,{' '}
             <span className="text-green font-medium">so scale feels smooth, not fragile.</span>
           </p>

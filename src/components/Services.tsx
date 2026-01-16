@@ -30,7 +30,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section-padding bg-black relative overflow-hidden">
+    <section id="services" className="scroll-section section-padding bg-black relative overflow-hidden">
       {/* Background Effects - Orange gradiation */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green/10 via-green/5 to-transparent"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green/5 blur-[100px] rounded-full"></div>
@@ -71,7 +71,7 @@ const Services = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-black transition-colors">
+              <h3 className="text-2xl md:text-3xl font-display uppercase mb-4 text-green transition-colors">
                 {service.title}
               </h3>
 

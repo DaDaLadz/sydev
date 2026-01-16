@@ -66,7 +66,7 @@ const CaseStudies = () => {
   };
 
   return (
-    <section id="case-studies" className="section-padding relative overflow-hidden">
+    <section id="case-studies" className="scroll-section section-padding relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
