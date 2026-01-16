@@ -1,5 +1,3 @@
-import PackagingTape from './PackagingTape';
-
 const Hero = () => {
 
   const scrollToSection = (sectionId: string) => {
@@ -38,11 +36,6 @@ const Hero = () => {
               }}
             />
           ))}
-        </div>
-
-        {/* Packaging Tape Divider at Bottom */}
-        <div className="absolute bottom-10 left-0 right-0">
-          <PackagingTape />
         </div>
       </div>
 

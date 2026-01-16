@@ -1,5 +1,3 @@
-import PackagingTape from './PackagingTape';
-
 const services = [
   {
     title: 'Store Design & Setup',
@@ -99,11 +97,6 @@ const Services = () => {
             Start a Conversation
           </button>
         </div>
-      </div>
-
-      {/* Packaging Tape Divider */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <PackagingTape />
       </div>
     </section>
   );
