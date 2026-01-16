@@ -41,45 +41,13 @@ const Hero = () => {
         </div>
 
         {/* Packaging Tape Divider at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
+        <div className="absolute bottom-10 left-0 right-0">
           <PackagingTape />
         </div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center pt-20 pb-32">
-        {/* Stacked Boxes - Left Side */}
-        <div className="absolute left-4 md:left-8 lg:left-16 bottom-32 md:bottom-40 hidden md:block pointer-events-none">
-          <div className="flex flex-col gap-2">
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={`left-${i}`}
-                className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-gray-600/50 bg-gray-700/30 backdrop-blur-sm"
-                style={{
-                  transform: `translateX(${i * 8}px) translateY(${-i * 4}px)`,
-                  opacity: 0.6 + i * 0.1,
-                }}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Stacked Boxes - Right Side */}
-        <div className="absolute right-4 md:right-8 lg:right-16 bottom-32 md:bottom-40 hidden md:block pointer-events-none">
-          <div className="flex flex-col gap-2">
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={`right-${i}`}
-                className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-gray-600/50 bg-gray-700/30 backdrop-blur-sm"
-                style={{
-                  transform: `translateX(${-i * 8}px) translateY(${-i * 4}px)`,
-                  opacity: 0.6 + i * 0.1,
-                }}
-              />
-            ))}
-          </div>
-        </div>
-
         {/* Logo - User should add logo-color.png to /public/logos/ */}
         <div className="mb-8 md:mb-12 animate-fade-in-up">
           <img
@@ -99,11 +67,11 @@ const Hero = () => {
 
         {/* Headline */}
         <div className="mb-12 md:mb-16 max-w-4xl animate-fade-in-up delay-100">
-          <h1 className="text-4xl md:text-6xl font-display uppercase tracking-tight leading-[1.1] mb-6 text-white">
+          <h1 className="text-4xl md:text-6xl font-display uppercase tracking-tight leading-[1.1] mb-6 text-black">
             As your online business grows, your systems need to{' '}
             <span className="text-green inline-block">grow with it.</span>
           </h1>
-          <p className="text-gray-300 mx-auto leading-relaxed max-w-2xl text-lg md:text-xl">
+          <p className="text-black mx-auto leading-relaxed max-w-2xl text-lg md:text-xl">
             We help e-commerce brands build the systems underneath their storefront,{' '}
             <span className="text-green font-medium">so scale feels smooth, not fragile.</span>
           </p>
