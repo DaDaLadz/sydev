@@ -12,7 +12,7 @@ function App() {
     <div className="min-h-screen bg-gray-700 overflow-x-hidden">
       <Navigation />
       <Hero />
-      <div className="h-[400vh]">
+      <div className="h-[700vh]">
         <Services />
         <CaseStudies />
         <Contact />
