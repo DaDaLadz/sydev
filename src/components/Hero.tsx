@@ -61,9 +61,8 @@ const Hero = () => {
         {/* Headline */}
         <div className="mb-12 md:mb-16 max-w-5xl animate-fade-in-up delay-100">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display uppercase tracking-tight leading-[1.1] mb-8 text-black">
-            As your online business grows,<br />
-            your systems need to{' '}
-            <span className="text-green inline-block">grow with it.</span>
+            As your online business grows<br />
+            your systems need to <span className="text-green inline-block">grow with it.</span>
           </h1>
           <p className="text-black mx-auto leading-relaxed max-w-3xl text-xl md:text-2xl lg:text-3xl">
             We help e-commerce brands build the systems underneath their storefront,{' '}
