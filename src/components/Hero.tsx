@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center pt-20 pb-32">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center pt-[138px] sm:pt-[154px] pb-32">
         {/* Logo - User should add logo-color.png to /public/logos/ */}
         <div className="mb-8 md:mb-12 mt-6 animate-fade-in-up">
           <img
