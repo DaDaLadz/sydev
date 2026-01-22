@@ -74,7 +74,7 @@ const Hero = () => {
         <div className="animate-fade-in-up delay-200 mb-8">
           <button
             onClick={() => scrollToSection('contact')}
-            className="group relative inline-flex items-center justify-center bg-green text-white font-sans rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="group relative inline-flex items-center justify-center bg-green text-white font-display rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg"
             style={{ padding: 'clamp(12px, 2vh, 16px) clamp(32px, 4vw, 48px)', fontSize: 'clamp(1rem, 1.5vw, 1.25rem)' }}
           >
             <span className="relative z-10 uppercase tracking-wider">Book a Call</span>

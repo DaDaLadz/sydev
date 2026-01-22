@@ -54,7 +54,7 @@ const Navigation = () => {
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-green text-white font-display px-8 py-4 rounded-lg text-xl uppercase tracking-wider hover:shadow-lg transition-all duration-300 border-none cursor-pointer"
+              className="bg-green text-white font-sans px-8 py-4 rounded-lg text-xl uppercase tracking-wider hover:shadow-lg transition-all duration-300 border-none cursor-pointer"
             >
               Get Started
             </button>
@@ -107,7 +107,7 @@ const Navigation = () => {
             <div className="mt-4 pt-4 border-t border-gray-200">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="w-full bg-green text-white font-display px-8 py-5 rounded-xl text-2xl uppercase tracking-wider text-center cursor-pointer border-none hover:shadow-lg transition-all duration-300"
+                className="w-full bg-green text-white font-sans px-8 py-5 rounded-xl text-2xl uppercase tracking-wider text-center cursor-pointer border-none hover:shadow-lg transition-all duration-300"
               >
                 Get Started
               </button>
