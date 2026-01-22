@@ -64,7 +64,7 @@ const FAQ = () => {
       <div className="relative max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-sans uppercase tracking-wider mb-4 text-black">
+          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-black">
             Frequently Asked <span className="text-green">Questions</span>
           </h2>
         </div>
