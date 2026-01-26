@@ -28,7 +28,7 @@ const Contact = () => {
     additionalInfo: '',
   });
 
-  const roles = ['Brand Owner', 'CMO/Marketing Lead', 'Agency Partner', 'E-Commerce Manager', 'Investor', 'Other'];
+  // const roles = ['Brand Owner', 'CMO/Marketing Lead', 'Agency Partner', 'E-Commerce Manager', 'Investor', 'Other'];
   const services = ['Store Design & Setup', 'Development & Technical', 'Optimization & Growth', 'Strategic Consulting'];
   const budgets = ['Under $10K/mo', '$10K-$25K/mo', '$25K-$50K/mo', '$50K-$100K/mo', '$100K+/mo', 'One-Time Project'];
   const timelines = ['ASAP', '2-4 Weeks', '1-2 Months', '3+ Months', 'Flexible'];
@@ -60,9 +60,9 @@ const Contact = () => {
     }
   };
 
-  const handleRoleSelect = (role: string) => {
-    setFormData({ ...formData, role });
-  };
+  // const handleRoleSelect = (role: string) => {
+  //   setFormData({ ...formData, role });
+  // };
 
   const handleServiceToggle = (service: string) => {
     const services = formData.services.includes(service)
