@@ -9,32 +9,32 @@ const faqs: FAQItem[] = [
   {
     question: 'Do you only work with Shopify stores?',
     answer:
-      "We specialize in Shopify and Shopify Plus, but we've also worked with brands on WooCommerce, BigCommerce, and custom platforms. Our approach is platform-agnostic - we focus on building systems that scale, no matter what tech stack you're using.",
+      "We specialize in Shopify and Shopify Plus because that's where 90% of scaling DTC brands live. But we've also built on WooCommerce, BigCommerce, and custom platforms. If you're outgrowing your tech stack, we'll tell you whether to fix it or migrate.",
   },
   {
     question: 'What size brands do you typically work with?',
     answer:
-      "Most of our clients are doing $500K-$10M+ in annual revenue and are looking to scale sustainably. We work with both bootstrapped DTC brands and venture-backed e-commerce companies. If you're past the figuring it out phase and ready to build real systems, we can help.",
+      "Our clients are doing $500K-$10M+ annually and hitting technical walls. You're past the Fiverr freelancer phase. You need real infrastructure, not more patches. If your store breaks under traffic or you're losing sales to site speed, we can fix it.",
   },
   {
     question: 'How does the engagement process work?',
     answer:
-      "We start with a discovery call to understand your goals, current setup, and biggest pain points. From there, we'll propose a tailored scope - whether that's a full-service retainer, a one-time project, or ongoing support. Most clients work with us on a monthly retainer basis for 6-12 months.",
+      "Discovery call. We audit your store, identify what's bottlenecking growth, and propose a plan. Could be a one-time build, a 3-month sprint, or an ongoing retainer. Most clients work with us for 6-12 months because fixing one thing usually reveals three more opportunities.",
   },
   {
     question: 'Can you help with store migrations?',
     answer:
-      "Yes. We've handled dozens of platform migrations - from WooCommerce to Shopify, Magento to Shopify Plus, and custom builds to Shopify. We handle everything: data migration, theme setup, app integrations, SEO preservation, and post-launch optimization.",
+      "Yes. We've migrated dozens of brands to Shopify from dying platforms. WooCommerce to Shopify. Magento to Shopify Plus. Custom nightmares to clean Shopify setups. We handle data, design, SEO, integrations, and post-launch optimization so nothing breaks.",
   },
   {
     question: 'What kind of results can we expect?',
     answer:
-      "Results vary by brand, but our clients typically see 2-4x revenue growth within 12 months, improved conversion rates, lower CAC, and higher LTV. We focus on sustainable, compounding growth - not quick wins that fall apart under scale.",
+      "Our clients typically see 2-4x revenue growth within 12 months. Better conversion rates, faster sites, lower CAC, higher LTV. We focus on compounding improvements — infrastructure that makes every dollar you spend on marketing work harder.",
   },
   {
     question: 'Do you offer one-time projects or only retainers?',
     answer:
-      "Both. We offer one-time projects for things like store builds, migrations, or conversion rate audits. For ongoing growth - paid ads, email automation, CRO testing - we work on monthly retainers. Most clients start with a project and transition to ongoing support once they see results.",
+      "Both. One-time: store builds, migrations, speed optimization, conversion audits. Retainer: ongoing CRO, development, optimization, and growth. Most brands start with a project, see results, then keep us around to keep scaling.",
   },
 ];
 
@@ -63,14 +63,14 @@ const FAQ = () => {
 
       <div className="relative max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-4 text-black">
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-3xl md:text-5xl font-display uppercase tracking-wider mb-2 text-black">
             Frequently Asked <span className="text-green">Questions</span>
           </h2>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -78,15 +78,15 @@ const FAQ = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div
-                className={`bg-black rounded-2xl border border-gray-600 p-8 cursor-pointer transition-all duration-300 ${
+                className={`bg-black rounded-xl border border-gray-600 p-5 md:p-6 cursor-pointer transition-all duration-300 ${
                   openIndex === index ? 'border-green/50 shadow-lg' : ''
                 }`}
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-xl md:text-2xl font-sans uppercase tracking-tight pr-4 text-white">{faq.question}</h3>
+                  <h3 className="text-lg md:text-xl font-sans uppercase tracking-tight pr-4 text-white">{faq.question}</h3>
                   <span
-                    className={`flex-shrink-0 w-12 h-12 rounded-full border-2 border-green/50 flex items-center justify-center text-green text-3xl transition-all duration-300 ${
+                    className={`flex-shrink-0 w-10 h-10 rounded-full border-2 border-green/50 flex items-center justify-center text-green text-2xl transition-all duration-300 ${
                       openIndex === index ? 'rotate-45 bg-green/20' : ''
                     }`}
                   >
@@ -95,10 +95,10 @@ const FAQ = () => {
                 </div>
                 <div
                   className={`overflow-hidden transition-all duration-500 ${
-                    openIndex === index ? 'max-h-96 mt-6' : 'max-h-0'
+                    openIndex === index ? 'max-h-96 mt-4' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-lg md:text-xl text-white leading-relaxed font-sans">{faq.answer}</p>
+                  <p className="text-base md:text-lg text-white leading-relaxed font-sans">{faq.answer}</p>
                 </div>
               </div>
             </div>

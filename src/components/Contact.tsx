@@ -94,19 +94,26 @@ const Contact = () => {
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 items-start">
           {/* Left Column */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="text-4xl md:text-6xl font-display uppercase tracking-wider mb-6 text-white">
-              Let's Build <span className="text-green">Together</span>
+            <h2 className="text-3xl md:text-5xl font-display uppercase tracking-wider mb-4 text-white">
+              Ready to Build a Store That Can Handle{' '}
+              <span className="text-green">Your Growth?</span>
             </h2>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Ready to scale your Shopify store? Tell us about your project and we'll create a custom plan for your business.
+            <p className="text-lg text-white mb-6 leading-relaxed">
+              Tell us where you are and where you're going. We'll show you exactly what's broken, what's missing, and what it takes to scale without the chaos.
             </p>
 
-            <div className="mt-12 pt-8 border-t border-gray-700">
+            <div className="mt-8 pt-6 border-t border-gray-700 space-y-3">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
                 <span className="text-sm text-white">Free Consultation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+                <span className="text-sm text-white">A Comprehensive Audit</span>
               </div>
             </div>
           </div>

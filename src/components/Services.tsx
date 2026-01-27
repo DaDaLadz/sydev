@@ -1,23 +1,23 @@
 const services = [
   {
     title: 'Store Design & Setup',
-    description: 'Shopify store buildout, theme customization, app integrations, and conversion rate optimization. We handle the technical foundation so your store can scale without breaking.',
-    icon: `${import.meta.env.BASE_URL}icons/icon-storefront.png`, // Icon #3 - Storefront + Infrastructure
+    description: 'Shopify builds designed for conversion with custom themes, strategic apps, and optimized checkout flows.',
+    icon: `${import.meta.env.BASE_URL}icons/icon-storefront.png`,
   },
   {
     title: 'Development & Technical',
-    description: 'Custom development, technical integrations, and backend systems. We build the infrastructure that powers seamless e-commerce experiences.',
-    icon: `${import.meta.env.BASE_URL}icons/icon-cart-tools.png`, // Icon #5 - Cart + Tools
+    description: 'We build the technical infrastructure that keeps high-volume stores running with custom code and API integrations.',
+    icon: `${import.meta.env.BASE_URL}icons/icon-cart-tools.png`,
   },
   {
     title: 'Optimization & Growth',
-    description: 'Data-driven optimization, analytics, and growth strategies. We analyze, test, and refine every aspect of your store to maximize revenue.',
-    icon: `${import.meta.env.BASE_URL}icons/icon-analytics.png`, // Icon #6 - Analytics + Growth
+    description: 'CRO testing, analytics tracking, systematic revenue optimization. We eliminate friction, fix leaks, and compound conversions.',
+    icon: `${import.meta.env.BASE_URL}icons/icon-analytics.png`,
   },
   {
     title: 'Strategic Consulting',
-    description: 'Expert guidance on e-commerce strategy, planning, and execution. We help you make the right decisions for sustainable, profitable growth.',
-    icon: `${import.meta.env.BASE_URL}icons/icon-pencil.png`, // Icon #8 - Pencil
+    description: 'Expert guidance from the team that\'s scaled brands to millions. We tell you what to build, what to kill, and what moves revenue.',
+    icon: `${import.meta.env.BASE_URL}icons/icon-pencil.png`,
   },
 ];
 
@@ -38,61 +38,57 @@ const Services = () => {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-20 px-4">
-          <span className="text-green text-sm font-bold uppercase tracking-[0.3em] mb-4 block">
+        <div className="text-center mb-8 md:mb-12 px-4">
+          <span className="text-green text-xs font-bold uppercase tracking-[0.3em] mb-3 block">
             What We Do
           </span>
-          <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight mb-4 text-white">
-            Four Pillars of <span className="text-green">E-Commerce Growth</span>
+          <h2 className="text-3xl md:text-5xl font-display uppercase tracking-tight mb-3 text-white">
+            Four Ways We Scale <span className="text-green">Your Store</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We build the systems underneath your Shopify store so growth feels intentional, not chaotic.
-          </p>
         </div>
 
         {/* 4-Quadrant Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-gray-200 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-gray-300 hover:border-green/50 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center"
+              className="group relative bg-gray-200 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-gray-300 hover:border-green/50 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center"
             >
               {/* Icon */}
-              <div className="mb-6 transition-transform duration-300 group-hover:scale-110">
+              <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
                 <img
                   src={service.icon}
                   alt={service.title}
-                  className="w-24 h-24 md:w-32 md:h-32 object-contain"
-                  onError={(e) => {
-                    // Fallback to placeholder if image not found
+                  className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                  onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                     e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"%3E%3Crect width="128" height="128" fill="%2392FD7B" opacity="0.2"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%2392FD7B" font-size="48"%3E?%3C/text%3E%3C/svg%3E';
                   }}
                 />
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-sans uppercase mb-4 text-green transition-colors">
+              <h3 className="text-xl md:text-2xl font-sans uppercase mb-3 text-green transition-colors">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-black leading-relaxed">
+              <p className="text-sm md:text-base text-black leading-relaxed">
                 {service.description}
               </p>
 
               {/* Subtle glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-br from-green/10 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-br from-green/10 to-transparent rounded-xl"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-10">
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center justify-center bg-green text-white font-display rounded-xl px-8 py-4 text-lg uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(255,55,1,0.4)] transition-all duration-300"
+            className="inline-flex items-center justify-center bg-green text-white font-display rounded-xl px-6 py-3 text-base uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_40px_rgba(255,55,1,0.4)] transition-all duration-300"
           >
             Start a Conversation
           </button>
