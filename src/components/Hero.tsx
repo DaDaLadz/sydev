@@ -1,12 +1,4 @@
-import { useState } from 'react';
-
-type HeroProps = {
-  backgroundVariant?: 'default' | 'dark' | 'gradient';
-};
-
-const Hero = ({ backgroundVariant = 'default' }: HeroProps) => {
-  const [bgVariant, setBgVariant] = useState(backgroundVariant);
-
+const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -14,28 +6,16 @@ const Hero = ({ backgroundVariant = 'default' }: HeroProps) => {
     }
   };
 
-  const backgroundStyles: Record<string, React.CSSProperties> = {
-    default: {
-      backgroundImage: `url(${import.meta.env.BASE_URL}bg-grey.png)`,
-      backgroundColor: '#374151',
-    },
-    dark: {
-      backgroundColor: '#111111',
-      backgroundImage: 'radial-gradient(ellipse at top, rgba(255,55,1,0.12) 0%, rgba(255,55,1,0.04) 40%, transparent 70%)',
-    },
-    gradient: {
-      background: 'linear-gradient(135deg, #1a1a1a 0%, #2d1810 50%, #1a1a1a 100%)',
-    },
-  };
-
   return (
     <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden">
-      {/* Animated Background */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Background - switchable via prop or state */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={backgroundStyles[bgVariant]}
+          style={{
+            backgroundImage: `url(${import.meta.env.BASE_URL}bg-grey.png)`,
+            backgroundColor: '#374151',
+          }}
         ></div>
 
         {/* Subtle Orange Accent Orbs */}
@@ -77,11 +57,11 @@ const Hero = ({ backgroundVariant = 'default' }: HeroProps) => {
 
         {/* Headline */}
         <div className="mb-8 md:mb-10 max-w-5xl animate-fade-in-up delay-100">
-          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-display uppercase tracking-tight leading-[1.1] mb-5 ${bgVariant === 'default' ? 'text-black' : 'text-white'}`}>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase tracking-tight leading-[1.1] mb-5 text-black">
             We Turn Shopify Stores Into{' '}
             <span className="text-green inline-block">Revenue Engines</span>
           </h1>
-          <p className={`mx-auto leading-relaxed max-w-3xl text-lg md:text-xl lg:text-2xl ${bgVariant === 'default' ? 'text-black' : 'text-gray-300'}`}>
+          <p className="mx-auto leading-relaxed max-w-3xl text-lg md:text-xl lg:text-2xl text-black">
             Technical infrastructure and conversion experts who scale e-commerce businesses fast.
           </p>
         </div>
@@ -96,30 +76,6 @@ const Hero = ({ backgroundVariant = 'default' }: HeroProps) => {
             <span className="relative z-10 uppercase tracking-wider">Book a Call</span>
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
           </button>
-        </div>
-
-        {/* Background Variant Switcher */}
-        <div className="animate-fade-in-up delay-300 flex items-center gap-2 mt-2">
-          {(['default', 'dark', 'gradient'] as const).map((variant) => (
-            <button
-              key={variant}
-              onClick={() => setBgVariant(variant)}
-              className={`w-5 h-5 rounded-full border-2 transition-all duration-200 ${
-                bgVariant === variant
-                  ? 'border-green scale-110'
-                  : 'border-gray-400 hover:border-gray-300'
-              }`}
-              style={{
-                backgroundColor:
-                  variant === 'default'
-                    ? '#374151'
-                    : variant === 'dark'
-                    ? '#111111'
-                    : '#2d1810',
-              }}
-              title={`${variant.charAt(0).toUpperCase() + variant.slice(1)} background`}
-            />
-          ))}
         </div>
 
         {/* Scroll Indicator */}
