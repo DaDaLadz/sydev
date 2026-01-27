@@ -18,7 +18,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/logos/logo-black.png"
+              src={`${import.meta.env.BASE_URL}logos/logo-black.png`}
               alt="Shop Yard"
               className="h-[74px] sm:h-[90px] w-auto"
               onError={(e) => {

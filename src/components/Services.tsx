@@ -2,22 +2,22 @@ const services = [
   {
     title: 'Store Design & Setup',
     description: 'Shopify store buildout, theme customization, app integrations, and conversion rate optimization. We handle the technical foundation so your store can scale without breaking.',
-    icon: '/icons/icon-storefront.png', // Icon #3 - Storefront + Infrastructure
+    icon: `${import.meta.env.BASE_URL}icons/icon-storefront.png`, // Icon #3 - Storefront + Infrastructure
   },
   {
     title: 'Development & Technical',
     description: 'Custom development, technical integrations, and backend systems. We build the infrastructure that powers seamless e-commerce experiences.',
-    icon: '/icons/icon-cart-tools.png', // Icon #5 - Cart + Tools
+    icon: `${import.meta.env.BASE_URL}icons/icon-cart-tools.png`, // Icon #5 - Cart + Tools
   },
   {
     title: 'Optimization & Growth',
     description: 'Data-driven optimization, analytics, and growth strategies. We analyze, test, and refine every aspect of your store to maximize revenue.',
-    icon: '/icons/icon-analytics.png', // Icon #6 - Analytics + Growth
+    icon: `${import.meta.env.BASE_URL}icons/icon-analytics.png`, // Icon #6 - Analytics + Growth
   },
   {
     title: 'Strategic Consulting',
     description: 'Expert guidance on e-commerce strategy, planning, and execution. We help you make the right decisions for sustainable, profitable growth.',
-    icon: '/icons/icon-pencil.png', // Icon #8 - Pencil
+    icon: `${import.meta.env.BASE_URL}icons/icon-pencil.png`, // Icon #8 - Pencil
   },
 ];
 

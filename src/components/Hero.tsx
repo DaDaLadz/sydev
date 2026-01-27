@@ -15,7 +15,7 @@ const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/bg-grey.png)',
+            backgroundImage: `url(${import.meta.env.BASE_URL}bg-grey.png)`,
             backgroundColor: '#374151', // Fallback color - dark grey (gray-700)
           }}
         ></div>
@@ -44,7 +44,7 @@ const Hero = () => {
         {/* Logo - User should add logo-color.png to /public/logos/ */}
         <div className="mb-8 md:mb-12 mt-6 animate-fade-in-up">
           <img
-            src="/logos/logo-color.png"
+            src={`${import.meta.env.BASE_URL}logos/logo-color.png`}
             alt="Shop Yard"
             className="h-32 md:h-48 lg:h-56 w-auto"
             onError={(e) => {
