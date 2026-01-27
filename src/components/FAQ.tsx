@@ -52,7 +52,7 @@ const FAQ = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/bg-grey.png)',
+            backgroundImage: `url(${import.meta.env.BASE_URL}bg-grey.png)`,
             backgroundColor: '#374151', // Fallback color - dark grey (gray-700)
           }}
         ></div>

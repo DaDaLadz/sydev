@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-4">
               <img
-                src="/logos/logo-black.png"
+                src={`${import.meta.env.BASE_URL}logos/logo-black.png`}
                 alt="Shop Yard"
                 className="h-12 w-auto"
                 onError={(e) => {
