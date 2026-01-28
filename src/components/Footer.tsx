@@ -7,9 +7,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black border-t border-gray-700 py-16 px-4">
+    <footer className="bg-black border-t border-gray-700 py-10 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="mb-4">
